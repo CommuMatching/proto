@@ -9,7 +9,35 @@ import SwiftUI
 import CoreData
 
 struct ContentView: View {
-    @Environment(\.managedObjectContext) private var viewContext
+    @State private var isShowingView: Bool = false
+    
+    var body: some View {
+        NavigationView {
+            VStack(spacing: .zero) {
+                if isShowingView {
+                    Homeview()
+                }else{
+                    Button {
+                        isShowingView = true
+                    } label: {
+                        Text("switch flag")
+                    }
+                }
+            }
+            .toolbar {
+                ToolbarItemGroup(placement: .bottomBar) {
+                    Button("Home"){isShowingView = true}
+                    Spacer()
+                    Button("Search"){}
+                    Spacer()
+                    //Button("report"){}
+                    //Spacer()
+                    Button("Setting"){}
+                }
+            }
+        }
+    }
+    /*@Environment(\.managedObjectContext) private var viewContext
 
     @FetchRequest(
         sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
@@ -71,8 +99,8 @@ struct ContentView: View {
                 fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
             }
         }
-    }
-}
+    }*/
+}/*
 
 private let itemFormatter: DateFormatter = {
     let formatter = DateFormatter()
@@ -80,9 +108,9 @@ private let itemFormatter: DateFormatter = {
     formatter.timeStyle = .medium
     return formatter
 }()
-
+*/
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+        ContentView()//.environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }

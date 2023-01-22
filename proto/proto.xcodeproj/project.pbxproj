@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		234F198F297CD4AB0060FC73 /* Homeview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234F198E297CD4AB0060FC73 /* Homeview.swift */; };
 		2384D25A297C44FC00386949 /* protoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2384D259297C44FC00386949 /* protoApp.swift */; };
 		2384D25C297C44FC00386949 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2384D25B297C44FC00386949 /* ContentView.swift */; };
 		2384D25E297C44FE00386949 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2384D25D297C44FE00386949 /* Assets.xcassets */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		234F198E297CD4AB0060FC73 /* Homeview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Homeview.swift; sourceTree = "<group>"; };
 		2384D256297C44FC00386949 /* proto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = proto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2384D259297C44FC00386949 /* protoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = protoApp.swift; sourceTree = "<group>"; };
 		2384D25B297C44FC00386949 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 				2384D262297C44FE00386949 /* Persistence.swift */,
 				2384D264297C44FE00386949 /* proto.xcdatamodeld */,
 				2384D25F297C44FE00386949 /* Preview Content */,
+				234F198E297CD4AB0060FC73 /* Homeview.swift */,
 			);
 			path = proto;
 			sourceTree = "<group>";
@@ -264,6 +267,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2384D263297C44FE00386949 /* Persistence.swift in Sources */,
+				234F198F297CD4AB0060FC73 /* Homeview.swift in Sources */,
 				2384D25C297C44FC00386949 /* ContentView.swift in Sources */,
 				2384D266297C44FE00386949 /* proto.xcdatamodeld in Sources */,
 				2384D25A297C44FC00386949 /* protoApp.swift in Sources */,
