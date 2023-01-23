@@ -9,30 +9,33 @@ import SwiftUI
 import CoreData
 
 struct ContentView: View {
-    @State private var isShowingView: Bool = false
+    enum bottomtab {
+        case home
+        case search
+        //case report
+        case setting
+    }
+    @State private var isShowingView: bottomtab = .home
     
     var body: some View {
         NavigationView {
             VStack(spacing: .zero) {
-                if isShowingView {
-                    Homeview()
-                }else{
-                    Button {
-                        isShowingView = true
-                    } label: {
-                        Text("switch flag")
-                    }
+                switch isShowingView {
+                    case .home: Homeview()
+                    case .search: Searchview()
+                    //case .report: Reportview()
+                    case .setting: Settingview()
                 }
             }
             .toolbar {
                 ToolbarItemGroup(placement: .bottomBar) {
-                    Button("Home"){isShowingView = true}
+                    Button("Home"){isShowingView = .home}
                     Spacer()
-                    Button("Search"){}
+                    Button("Search"){isShowingView = .search}
                     Spacer()
-                    //Button("report"){}
+                    //Button("report"){isShowingView = .report}
                     //Spacer()
-                    Button("Setting"){}
+                    Button("Setting"){isShowingView = .setting}
                 }
             }
         }

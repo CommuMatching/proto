@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct Homeview: View {
+    @State private var isShowingView: Bool = false
     var body: some View {
         Text("Home")
     }
