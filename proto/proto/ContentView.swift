@@ -11,7 +11,7 @@ import CoreData
 struct ContentView: View {
     enum bottomtab {
         case home
-        case search
+        case map
         //case report
         case setting
     }
@@ -22,20 +22,50 @@ struct ContentView: View {
             VStack(spacing: .zero) {
                 switch isShowingView {
                     case .home: Homeview()
-                    case .search: Searchview()
+                    case .map: Mapview()
                     //case .report: Reportview()
                     case .setting: Settingview()
                 }
             }
             .toolbar {
                 ToolbarItemGroup(placement: .bottomBar) {
-                    Button("Home"){isShowingView = .home}
+                    Button(action: {isShowingView = .home}) {
+                        Text("Home")
+                            .bold()
+                            .padding()
+                            .frame(width: 80, height: 70)
+                            .foregroundColor(Color.black)
+                            .overlay(
+                                Circle()
+                                .stroke(Color.yellow, lineWidth: 3)
+                            )
+                    }
                     Spacer()
-                    Button("Search"){isShowingView = .search}
+                    Button(action: {isShowingView = .map}) {
+                        Text("Map")
+                            .bold()
+                            .padding()
+                            .frame(width: 70, height: 70)
+                            .foregroundColor(Color.black)
+                            .overlay(
+                                Circle()
+                                .stroke(Color.yellow, lineWidth: 3)
+                            )
+                    }
                     Spacer()
                     //Button("report"){isShowingView = .report}
                     //Spacer()
-                    Button("Setting"){isShowingView = .setting}
+                    Button(action: {isShowingView = .setting}) {
+                        Text("Set")
+                            .bold()
+                            .padding()
+                            .frame(width: 70, height: 70)
+                            .foregroundColor(Color.black)
+                            .overlay(
+                                Circle()
+                                .stroke(Color.yellow, lineWidth: 3)
+                            )
+                    }
                 }
             }
         }
