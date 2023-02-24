@@ -9,7 +9,16 @@ import SwiftUI
 
 struct Settingview: View {
     var body: some View {
-        Text("Setting")
+        NavigationView {
+            let settings = ["User","Policy","News"]
+            List{
+                ForEach(0 ..< settings.count, id: \.self) { index in
+                        NavigationLink(destination: Text(settings[index])) {
+                        Text(settings[index])
+                        }
+                }
+            }
+        }
     }
 }
 

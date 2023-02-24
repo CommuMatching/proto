@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		2301C6E3297FF5E900B7DC98 /* Mapview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2301C6E2297FF5E900B7DC98 /* Mapview.swift */; };
 		234F198F297CD4AB0060FC73 /* Homeview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234F198E297CD4AB0060FC73 /* Homeview.swift */; };
-		23553C25297E390A00E50FC0 /* Searchview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23553C24297E390A00E50FC0 /* Searchview.swift */; };
 		23553C27297E394A00E50FC0 /* Settingview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23553C26297E394A00E50FC0 /* Settingview.swift */; };
 		23553C29297E3BC200E50FC0 /* Reportview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23553C28297E3BC200E50FC0 /* Reportview.swift */; };
 		2384D25A297C44FC00386949 /* protoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2384D259297C44FC00386949 /* protoApp.swift */; };
@@ -44,7 +43,6 @@
 /* Begin PBXFileReference section */
 		2301C6E2297FF5E900B7DC98 /* Mapview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mapview.swift; sourceTree = "<group>"; };
 		234F198E297CD4AB0060FC73 /* Homeview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Homeview.swift; sourceTree = "<group>"; };
-		23553C24297E390A00E50FC0 /* Searchview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Searchview.swift; sourceTree = "<group>"; };
 		23553C26297E394A00E50FC0 /* Settingview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settingview.swift; sourceTree = "<group>"; };
 		23553C28297E3BC200E50FC0 /* Reportview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reportview.swift; sourceTree = "<group>"; };
 		2384D256297C44FC00386949 /* proto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = proto.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -117,7 +115,6 @@
 				2384D264297C44FE00386949 /* proto.xcdatamodeld */,
 				2384D25F297C44FE00386949 /* Preview Content */,
 				234F198E297CD4AB0060FC73 /* Homeview.swift */,
-				23553C24297E390A00E50FC0 /* Searchview.swift */,
 				23553C26297E394A00E50FC0 /* Settingview.swift */,
 				23553C28297E3BC200E50FC0 /* Reportview.swift */,
 				2301C6E2297FF5E900B7DC98 /* Mapview.swift */,
@@ -289,7 +286,6 @@
 				2384D25C297C44FC00386949 /* ContentView.swift in Sources */,
 				2384D266297C44FE00386949 /* proto.xcdatamodeld in Sources */,
 				23E159AC29A4E44E005E965C /* SearchBar.swift in Sources */,
-				23553C25297E390A00E50FC0 /* Searchview.swift in Sources */,
 				2384D25A297C44FC00386949 /* protoApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
