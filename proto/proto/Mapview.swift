@@ -8,19 +8,7 @@
 import SwiftUI
 import MapKit
 
-class ConversionSpot {
-    // ジオコーディング
-    func geocoding(address: String){
-        let geocoder = CLGeocoder()
-        geocoder.geocodeAddressString(address) {(placemarks, error) in
-            let lat = placemarks?.first?.location?.coordinate.latitude
-            let long = placemarks?.first?.location?.coordinate.longitude
-        }
-    }
-}
-
 struct Mapview: View {
-    var convspot = ConversionSpot()
     @State  var region = MKCoordinateRegion(
             center : CLLocationCoordinate2D(
                 latitude: 35.710057714926265,  // 緯度
@@ -31,10 +19,63 @@ struct Mapview: View {
         )
     @State private var searchText = ""
     
+    func geocode(completionHandler: @escaping (CLLocationCoordinate2D? , Error?) -> (), errorHandler: @escaping () -> ()){
+        
+        let geocoder = CLGeocoder()
+        geocoder.geocodeAddressString(searchText) { (placemarks, error) in
+            guard let unwrapPlacemark = placemarks else {
+                DispatchQueue.main.async {
+                    // エラーを返す
+                    completionHandler(nil, error)
+                }
+                return
+            }
+        
+            let firstPlacemark = unwrapPlacemark.first!
+            let location = firstPlacemark.location!
+            
+            DispatchQueue.main.async {
+                // 取得した住所を返す
+                completionHandler(location.coordinate, nil)
+            }
+        }
+    }
+
+    func reloadRegion(address: String) {
+        geocode { location, error in
+            guard let location = location else {
+                if let error = error {
+                    print(error.localizedDescription)
+                } else {
+                    print("Unknown error.")
+                }
+                return
+            }
+            
+            let center = CLLocationCoordinate2D(
+                        latitude: location.latitude,
+                        longitude: location.longitude)
+            
+            region = MKCoordinateRegion(
+                        center: center,
+                        latitudinalMeters: 1000.0,
+                        longitudinalMeters: 1000.0
+                    )
+        } errorHandler: {
+            print("error")
+        }
+    }
+    
     var body: some View {
         NavigationView {
-            Map(coordinateRegion: $region,interactionModes: .all,showsUserLocation: true,userTrackingMode: .none)
-                //.edgesIgnoringSafeArea(.all)
+            ZStack(alignment: .top){
+                Map(coordinateRegion: $region,interactionModes: .all,showsUserLocation: true,userTrackingMode: .none)
+                    .edgesIgnoringSafeArea(.all)
+                SearchBar(text: $searchText)
+                    .onSubmit {
+                        reloadRegion(address: searchText)
+                  }
+            }
         }
     }
 }

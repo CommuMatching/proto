@@ -21,6 +21,7 @@
 		2384D270297C44FE00386949 /* protoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2384D26F297C44FE00386949 /* protoTests.swift */; };
 		2384D27A297C44FE00386949 /* protoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2384D279297C44FE00386949 /* protoUITests.swift */; };
 		2384D27C297C44FE00386949 /* protoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2384D27B297C44FE00386949 /* protoUITestsLaunchTests.swift */; };
+		23E159AC29A4E44E005E965C /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E159AB29A4E44E005E965C /* SearchBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		2384D275297C44FE00386949 /* protoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = protoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2384D279297C44FE00386949 /* protoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = protoUITests.swift; sourceTree = "<group>"; };
 		2384D27B297C44FE00386949 /* protoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = protoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		23E159AB29A4E44E005E965C /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 				23553C26297E394A00E50FC0 /* Settingview.swift */,
 				23553C28297E3BC200E50FC0 /* Reportview.swift */,
 				2301C6E2297FF5E900B7DC98 /* Mapview.swift */,
+				23E159AB29A4E44E005E965C /* SearchBar.swift */,
 			);
 			path = proto;
 			sourceTree = "<group>";
@@ -285,6 +288,7 @@
 				2301C6E3297FF5E900B7DC98 /* Mapview.swift in Sources */,
 				2384D25C297C44FC00386949 /* ContentView.swift in Sources */,
 				2384D266297C44FE00386949 /* proto.xcdatamodeld in Sources */,
+				23E159AC29A4E44E005E965C /* SearchBar.swift in Sources */,
 				23553C25297E390A00E50FC0 /* Searchview.swift in Sources */,
 				2384D25A297C44FC00386949 /* protoApp.swift in Sources */,
 			);

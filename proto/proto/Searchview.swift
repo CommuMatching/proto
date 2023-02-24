@@ -8,12 +8,20 @@
 import SwiftUI
 
 struct Searchview: View {
+    @Environment(\.dismiss) var dismiss
     @State private var searchText = ""
     @State var searchHistory: [String] = ["kai","lei"]
     
     var body: some View {
-        NavigationStack {
+        NavigationView {
             Text("search")
+                .toolbar{
+                    ToolbarItem(placement: .navigationBarLeading){
+                        Button(action: {dismiss()}) {
+                            Text("Back")
+                        }
+                    }
+                }
         }
     }
 }
