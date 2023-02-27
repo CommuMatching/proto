@@ -8,41 +8,19 @@
 import SwiftUI
 
 struct ClubList: View {
-    @State private var isHome = false
-    @State public var x_from_dragstart:CGFloat = 0
-    
-    func backhome() {
-        if x_from_dragstart < -10 {
-            withAnimation {isHome.toggle()}
-        }
-    }
-    var gesture: some Gesture {
-            DragGesture()
-                .onEnded{ value in
-                    self.x_from_dragstart = value.translation.width
-                    backhome()
-                }
-                .onChanged { value in
-                    self.x_from_dragstart = value.translation.width
-                    backhome()
-                }
-        }
-    
     var body: some View {
-        NavigationView {
-            ZStack {
+        HStack(spacing: UIScreen.main.bounds.width/4) {
+            Spacer()
+            NavigationView {
                 let clubs = ["club1"]
                 List{
                     ForEach(0 ..< clubs.count, id: \.self) { index in
                             NavigationLink(destination: Text(clubs[index])) {
                             Text(clubs[index])
-                            }
+                        }
                     }
                 }
-                if isHome {
-                    Homeview().transition(.move(edge: .trailing))
-                }
-            }.gesture(self.gesture)
+            }
         }
     }
 }

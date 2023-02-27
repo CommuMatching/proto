@@ -30,41 +30,17 @@ struct ContentView: View {
             .toolbar {
                 ToolbarItemGroup(placement: .bottomBar) {
                     Button(action: {isShowingView = .home}) {
-                        Text("Home")
-                            .bold()
-                            .padding()
-                            .frame(width: 80, height: 70)
-                            .foregroundColor(Color.black)
-                            .overlay(
-                                Circle()
-                                    .stroke(Color.yellow, lineWidth: 3)
-                            )
+                        Text("Home").yellowcircle()
                     }
                     Spacer()
                     Button(action: {isShowingView = .map}) {
-                        Text("Map")
-                            .bold()
-                            .padding()
-                            .frame(width: 70, height: 70)
-                            .foregroundColor(Color.black)
-                            .overlay(
-                                Circle()
-                                    .stroke(Color.yellow, lineWidth: 3)
-                            )
+                        Text("Map").yellowcircle()
                     }
                     Spacer()
                     //Button("report"){isShowingView = .report}
                     //Spacer()
                     Button(action: {isShowingView = .setting}) {
-                        Text("Set")
-                            .bold()
-                            .padding()
-                            .frame(width: 70, height: 70)
-                            .foregroundColor(Color.black)
-                            .overlay(
-                                Circle()
-                                    .stroke(Color.yellow, lineWidth: 3)
-                            )
+                        Text("Set").yellowcircle()
                     }
                 }
             }
@@ -72,8 +48,22 @@ struct ContentView: View {
         
     }
 }
+
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+    }
+}
+
+extension View {
+    func yellowcircle() -> some View{
+        return bold()
+            .padding()
+            .frame(width: 80, height: 70)
+            .foregroundColor(Color.black)
+            .overlay(
+                Circle()
+                    .stroke(Color.yellow, lineWidth: 3)
+            )
     }
 }
