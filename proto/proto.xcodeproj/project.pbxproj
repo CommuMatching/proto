@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2301C6E3297FF5E900B7DC98 /* Mapview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2301C6E2297FF5E900B7DC98 /* Mapview.swift */; };
+		2347DB1429A881F500EECDB3 /* MemberList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2347DB1329A881F500EECDB3 /* MemberList.swift */; };
+		2347DB1629A8821200EECDB3 /* ClubList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2347DB1529A8821200EECDB3 /* ClubList.swift */; };
 		234F198F297CD4AB0060FC73 /* Homeview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234F198E297CD4AB0060FC73 /* Homeview.swift */; };
 		23553C27297E394A00E50FC0 /* Settingview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23553C26297E394A00E50FC0 /* Settingview.swift */; };
 		23553C29297E3BC200E50FC0 /* Reportview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23553C28297E3BC200E50FC0 /* Reportview.swift */; };
@@ -42,6 +44,8 @@
 
 /* Begin PBXFileReference section */
 		2301C6E2297FF5E900B7DC98 /* Mapview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mapview.swift; sourceTree = "<group>"; };
+		2347DB1329A881F500EECDB3 /* MemberList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberList.swift; sourceTree = "<group>"; };
+		2347DB1529A8821200EECDB3 /* ClubList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubList.swift; sourceTree = "<group>"; };
 		234F198E297CD4AB0060FC73 /* Homeview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Homeview.swift; sourceTree = "<group>"; };
 		23553C26297E394A00E50FC0 /* Settingview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settingview.swift; sourceTree = "<group>"; };
 		23553C28297E3BC200E50FC0 /* Reportview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reportview.swift; sourceTree = "<group>"; };
@@ -119,6 +123,8 @@
 				23553C28297E3BC200E50FC0 /* Reportview.swift */,
 				2301C6E2297FF5E900B7DC98 /* Mapview.swift */,
 				23E159AB29A4E44E005E965C /* SearchBar.swift */,
+				2347DB1329A881F500EECDB3 /* MemberList.swift */,
+				2347DB1529A8821200EECDB3 /* ClubList.swift */,
 			);
 			path = proto;
 			sourceTree = "<group>";
@@ -279,6 +285,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2384D263297C44FE00386949 /* Persistence.swift in Sources */,
+				2347DB1429A881F500EECDB3 /* MemberList.swift in Sources */,
+				2347DB1629A8821200EECDB3 /* ClubList.swift in Sources */,
 				23553C27297E394A00E50FC0 /* Settingview.swift in Sources */,
 				23553C29297E3BC200E50FC0 /* Reportview.swift in Sources */,
 				234F198F297CD4AB0060FC73 /* Homeview.swift in Sources */,
