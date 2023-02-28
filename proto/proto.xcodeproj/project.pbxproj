@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2301C6E3297FF5E900B7DC98 /* Mapview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2301C6E2297FF5E900B7DC98 /* Mapview.swift */; };
+		233E8A4529ADC3FB00918DEB /* MapModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233E8A4429ADC3FB00918DEB /* MapModels.swift */; };
 		2347DB1429A881F500EECDB3 /* MemberList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2347DB1329A881F500EECDB3 /* MemberList.swift */; };
 		2347DB1629A8821200EECDB3 /* ClubList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2347DB1529A8821200EECDB3 /* ClubList.swift */; };
 		234F198F297CD4AB0060FC73 /* Homeview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234F198E297CD4AB0060FC73 /* Homeview.swift */; };
@@ -44,6 +45,7 @@
 
 /* Begin PBXFileReference section */
 		2301C6E2297FF5E900B7DC98 /* Mapview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mapview.swift; sourceTree = "<group>"; };
+		233E8A4429ADC3FB00918DEB /* MapModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapModels.swift; sourceTree = "<group>"; };
 		2347DB1329A881F500EECDB3 /* MemberList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberList.swift; sourceTree = "<group>"; };
 		2347DB1529A8821200EECDB3 /* ClubList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubList.swift; sourceTree = "<group>"; };
 		234F198E297CD4AB0060FC73 /* Homeview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Homeview.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 				23E159AB29A4E44E005E965C /* SearchBar.swift */,
 				2347DB1329A881F500EECDB3 /* MemberList.swift */,
 				2347DB1529A8821200EECDB3 /* ClubList.swift */,
+				233E8A4429ADC3FB00918DEB /* MapModels.swift */,
 			);
 			path = proto;
 			sourceTree = "<group>";
@@ -292,6 +295,7 @@
 				234F198F297CD4AB0060FC73 /* Homeview.swift in Sources */,
 				2301C6E3297FF5E900B7DC98 /* Mapview.swift in Sources */,
 				2384D25C297C44FC00386949 /* ContentView.swift in Sources */,
+				233E8A4529ADC3FB00918DEB /* MapModels.swift in Sources */,
 				2384D266297C44FE00386949 /* proto.xcdatamodeld in Sources */,
 				23E159AC29A4E44E005E965C /* SearchBar.swift in Sources */,
 				2384D25A297C44FC00386949 /* protoApp.swift in Sources */,
@@ -456,11 +460,11 @@
 				DEVELOPMENT_TEAM = MFND2UAJBR;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "現在地を表示します";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -485,11 +489,11 @@
 				DEVELOPMENT_TEAM = MFND2UAJBR;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "現在地を表示します";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

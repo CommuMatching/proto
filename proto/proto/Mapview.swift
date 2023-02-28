@@ -9,6 +9,10 @@ import SwiftUI
 import MapKit
 
 struct Mapview: View {
+    @ObservedObject  var manager = LocationManager()
+    // ユーザートラッキングモードを追従モードにするための変数を定義
+    @State  var trackingMode = MapUserTrackingMode.follow
+    
     @State  var region = MKCoordinateRegion(
             center : CLLocationCoordinate2D(
                 latitude: 35.710057714926265,  // 緯度
@@ -69,7 +73,7 @@ struct Mapview: View {
     var body: some View {
         NavigationView {
             ZStack(alignment: .top){
-                Map(coordinateRegion: $region,interactionModes: .all,showsUserLocation: true,userTrackingMode: .none)
+                Map(coordinateRegion: searchText == "" ? $manager.region : self.$region,interactionModes: .all,showsUserLocation: true,userTrackingMode: searchText == "" ? $trackingMode : .none)
                     .edgesIgnoringSafeArea(.all)
                 SearchBar(text: $searchText)
                     .onSubmit {
