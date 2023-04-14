@@ -6,21 +6,30 @@
 //
 
 import SwiftUI
+import CoreData
 
 struct MemberList: View {
+    @Environment(\.managedObjectContext) private var viewContext
+    @FetchRequest(
+        entity: Member.entity(),
+        sortDescriptors: [NSSortDescriptor(key: "id", ascending: false)],
+        animation: .default
+    ) var fetchedMemberList: FetchedResults<Member>
+    
     var body: some View {
-        HStack(spacing: UIScreen.main.bounds.width/4) {
-            NavigationView {
-                let members = ["member1"]
-                List{
-                    ForEach(0 ..< members.count, id: \.self) { index in
-                        NavigationLink(destination: Text(members[index])) {
-                            Text(members[index])
-                            
+        VStack(spacing: UIScreen.main.bounds.height/64){
+                HStack(spacing: UIScreen.main.bounds.width/4) {
+                    NavigationView {
+                        List{
+                            ForEach(fetchedMemberList) { member in
+                                NavigationLink(destination: Text(member.name ?? "")) {
+                                    Text(member.name ?? "")
+                                }
+                            }
                         }
                     }
+                    Spacer()
                 }
-            }
             Spacer()
         }
     }
@@ -28,6 +37,6 @@ struct MemberList: View {
 
 struct MemberList_Previews: PreviewProvider {
     static var previews: some View {
-        MemberList()
+        MemberList().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }

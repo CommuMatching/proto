@@ -19,14 +19,16 @@ struct ContentView: View {
     
     var body: some View {
         NavigationView {
-            VStack(spacing: .zero) {
+            ZStack(/*spacing: .zero*/) {
                 switch isShowingView {
-                case .home: Homeview()
-                case .map: Mapview()
-                //case .report: Reportview()
-                case .setting: Settingview()
+                    case .home: Homeview()
+                    case .map: Mapview()
+                    //case .report: Reportview()
+                    case .setting: Settingview()
                 }
             }
+            .toolbarBackground(.green, for: .bottomBar)
+            .toolbarBackground(.visible, for: .bottomBar)
             .toolbar {
                 ToolbarItemGroup(placement: .bottomBar) {
                     Button(action: {isShowingView = .home}) {
@@ -51,7 +53,7 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }
 

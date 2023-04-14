@@ -17,6 +17,9 @@ struct Settingview: View {
                         Text(settings[index])
                         }
                 }
+                NavigationLink(destination: Userauth()) {
+                Text("ユーザー登録")
+                }
             }
         }
     }

@@ -74,7 +74,7 @@ struct Mapview: View {
         NavigationView {
             ZStack(alignment: .top){
                 Map(coordinateRegion: searchText == "" ? $manager.region : self.$region,interactionModes: .all,showsUserLocation: true,userTrackingMode: searchText == "" ? $trackingMode : .none)
-                    .edgesIgnoringSafeArea(.all)
+                    .edgesIgnoringSafeArea(.top)
                 SearchBar(text: $searchText)
                     .onSubmit {
                         reloadRegion(address: searchText)

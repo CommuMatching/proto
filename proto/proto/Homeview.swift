@@ -46,7 +46,7 @@ struct Homeview: View {
     
     var body: some View {
         ZStack {
-            Color.white.opacity(0.1).edgesIgnoringSafeArea(.all)
+            Color.blue.opacity(1).edgesIgnoringSafeArea(.all)
             if memv != clbv {
                 Color.black.opacity(0.3).edgesIgnoringSafeArea(.all)
                     .onTapGesture {
