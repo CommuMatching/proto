@@ -11,6 +11,7 @@
 		233E8A4529ADC3FB00918DEB /* MapModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233E8A4429ADC3FB00918DEB /* MapModels.swift */; };
 		2347DB1429A881F500EECDB3 /* MemberList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2347DB1329A881F500EECDB3 /* MemberList.swift */; };
 		2347DB1629A8821200EECDB3 /* ClubList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2347DB1529A8821200EECDB3 /* ClubList.swift */; };
+		234A2EA929EA8F92005CC6BF /* PasswordBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234A2EA829EA8F92005CC6BF /* PasswordBar.swift */; };
 		234F198F297CD4AB0060FC73 /* Homeview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234F198E297CD4AB0060FC73 /* Homeview.swift */; };
 		23553C27297E394A00E50FC0 /* Settingview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23553C26297E394A00E50FC0 /* Settingview.swift */; };
 		23553C29297E3BC200E50FC0 /* Reportview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23553C28297E3BC200E50FC0 /* Reportview.swift */; };
@@ -62,6 +63,7 @@
 		233E8A4429ADC3FB00918DEB /* MapModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapModels.swift; sourceTree = "<group>"; };
 		2347DB1329A881F500EECDB3 /* MemberList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberList.swift; sourceTree = "<group>"; };
 		2347DB1529A8821200EECDB3 /* ClubList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubList.swift; sourceTree = "<group>"; };
+		234A2EA829EA8F92005CC6BF /* PasswordBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordBar.swift; sourceTree = "<group>"; };
 		234F198E297CD4AB0060FC73 /* Homeview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Homeview.swift; sourceTree = "<group>"; };
 		23553C26297E394A00E50FC0 /* Settingview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settingview.swift; sourceTree = "<group>"; };
 		23553C28297E3BC200E50FC0 /* Reportview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reportview.swift; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 				233E8A4429ADC3FB00918DEB /* MapModels.swift */,
 				237F131229E7FB2D004AD7A2 /* GoogleService-Info.plist */,
 				237F132129E7FF8C004AD7A2 /* Userauth.swift */,
+				234A2EA829EA8F92005CC6BF /* PasswordBar.swift */,
 			);
 			path = proto;
 			sourceTree = "<group>";
@@ -208,7 +211,6 @@
 				83A4471A5F9C115D8C287D8F /* Pods-protoTests.debug.xcconfig */,
 				B50E569BA81DC73222EF6DDC /* Pods-protoTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -476,6 +478,7 @@
 				2347DB1429A881F500EECDB3 /* MemberList.swift in Sources */,
 				2347DB1629A8821200EECDB3 /* ClubList.swift in Sources */,
 				23553C27297E394A00E50FC0 /* Settingview.swift in Sources */,
+				234A2EA929EA8F92005CC6BF /* PasswordBar.swift in Sources */,
 				23553C29297E3BC200E50FC0 /* Reportview.swift in Sources */,
 				23F65FA229DFF2B700053407 /* Member+CoreDataClass.swift in Sources */,
 				234F198F297CD4AB0060FC73 /* Homeview.swift in Sources */,

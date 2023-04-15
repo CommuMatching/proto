@@ -17,11 +17,11 @@ struct Userauth: View {
         VStack{
             TextField("name", text: $name).padding().textFieldStyle(.roundedBorder)
             TextField("email address", text: $email).padding().textFieldStyle(.roundedBorder)
-            TextField("password", text: $password).padding().textFieldStyle(.roundedBorder)
+            PasswordBar(password: $password).padding().textFieldStyle(.roundedBorder)
                 
             Button(action: {
-                Auth.auth().createUser(withEmail: email, password: password) { result, error in
-                if let user = result?.user {
+                Auth.auth().createUser(withEmail: self.email, password: self.password) { authResult, error in
+                if let user = authResult?.user {
                     let request = user.createProfileChangeRequest()
                     request.displayName = name
                     request.commitChanges { error in
