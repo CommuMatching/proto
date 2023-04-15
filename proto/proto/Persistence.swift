@@ -13,11 +13,6 @@ struct PersistenceController {
     static var preview: PersistenceController = {
         let result = PersistenceController(inMemory: true)
         let viewContext = result.container.viewContext
-        for index in 0..<10 {
-            let newMember = Member(context: viewContext)
-            newMember.name = "メンバー\(index + 1)"
-            newMember.id = "\(index + 1)"
-        }
         do {
             try viewContext.save()
         } catch {

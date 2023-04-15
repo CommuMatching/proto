@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import CoreData
+import FirebaseAuth
 
 struct ContentView: View {
     enum bottomtab {
@@ -53,7 +53,7 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+        ContentView()
     }
 }
 
