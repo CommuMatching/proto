@@ -9,8 +9,11 @@ import SwiftUI
 import FirebaseAuth
 
 struct Settingview: View {
+    @State private var activie = false
+    
     var body: some View {
-        NavigationView {
+        NavigationStack {
+
             let settings = ["User","Policy","News"]
             List{
                 ForEach(0 ..< settings.count, id: \.self) { index in
@@ -18,11 +21,21 @@ struct Settingview: View {
                         Text(settings[index])
                         }
                 }
-                NavigationLink(destination: Userauth()) {
-                Text("ユーザー登録")
+                NavigationLink(destination: Button(action: {
+                    do {
+                        try Auth.auth().signOut()
+                        activie.toggle()
+                    } catch let signOutError as NSError {
+                        print("Error signing out: %@", signOutError)
+                        }
+                    }, label: {Text("LogOut")}
+                )) {
+                Text("Log out")
                 }
             }
-        }
+        }.navigationDestination(isPresented: $activie, destination: {
+            Loginview()
+        })
     }
 }
 

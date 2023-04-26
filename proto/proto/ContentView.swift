@@ -18,7 +18,7 @@ struct ContentView: View {
     @State private var isShowingView: bottomtab = .home
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             ZStack(/*spacing: .zero*/) {
                 switch isShowingView {
                     case .home: Homeview()
@@ -46,26 +46,12 @@ struct ContentView: View {
                     }
                 }
             }
-        }
-        
+        }.navigationBarBackButtonHidden(true)
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-    }
-}
-
-extension View {
-    func yellowcircle() -> some View{
-        return bold()
-            .padding()
-            .frame(width: 80, height: 70)
-            .foregroundColor(Color.black)
-            .overlay(
-                Circle()
-                    .stroke(Color.yellow, lineWidth: 3)
-            )
     }
 }

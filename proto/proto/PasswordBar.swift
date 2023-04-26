@@ -20,10 +20,12 @@ struct PasswordBar: View {
                 TextField("パスワード", text: $password)
                     .focused($focusText)
                     .opacity(show ? 1 : 0)
+                    .textfieldframe(linewid: focusText ? 4.0 : 2.0)
                     
                 SecureField("パスワード", text: $password)
                     .focused($focusSecure)
                     .opacity(show ? 0 : 1)
+                    .textfieldframe(linewid: focusSecure ? 4.0 : 2.0)
                     
                 Button(action: {
                     show.toggle()
@@ -38,7 +40,7 @@ struct PasswordBar: View {
                         .font(.system(size: 15))
                             
                 })
-            }.padding().textFieldStyle(.roundedBorder)
+            }
         }
     }
 }

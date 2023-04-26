@@ -9,18 +9,59 @@ import SwiftUI
 import FirebaseAuth
 
 struct Userauth: View {
+    enum Field {
+        case Name
+        case Mail
+        case Password
+    }
     @State  var name:String = ""
-    @State  var email:String = ""
+    @State  var mail:String = ""
     @State  var password:String = ""
+    @FocusState private var focusedField: Field?
         
     var body: some View {
         VStack{
-            TextField("name", text: $name).padding().textFieldStyle(.roundedBorder)
-            TextField("email address", text: $email).padding().textFieldStyle(.roundedBorder)
-            PasswordBar(password: $password).padding().textFieldStyle(.roundedBorder)
+            TextField("名前", text: $name)
+                .focused($focusedField, equals: .Name)
+                .toolbar{
+                    ToolbarItem(placement: .keyboard){
+                        HStack{
+                            Spacer()
+                            Button("Close"){
+                                self.focusedField = nil
+                            }
+                        }
+                    }
+                }
+                .textfieldframe(linewid: (focusedField == .Name) ? 4.0 : 2.0)
+                
+            TextField("メールアドレス", text: $mail)
+                .focused($focusedField, equals: .Mail)
+                .toolbar{
+                    ToolbarItem(placement: .keyboard){
+                        HStack{
+                            Spacer()
+                            Button("Close"){
+                                self.focusedField = nil
+                            }
+                        }
+                    }
+                }
+                .textfieldframe(linewid: (focusedField == .Mail) ? 4.0 : 2.0)
+            
+            PasswordBar(password: $password)
+                .focused($focusedField, equals: .Password)
+                .toolbar{
+                    ToolbarItemGroup(placement: .keyboard){
+                        Spacer()
+                        Button("Close"){
+                            self.focusedField = nil
+                        }
+                    }
+                }
                 
             Button(action: {
-                Auth.auth().createUser(withEmail: self.email, password: self.password) { authResult, error in
+                Auth.auth().createUser(withEmail: self.mail, password: self.password) { authResult, error in
                 if let user = authResult?.user {
                     let request = user.createProfileChangeRequest()
                     request.displayName = name
@@ -37,6 +78,7 @@ struct Userauth: View {
             }
             }, label: {
                 Text("新規登録")
+                    .decisionbutton()
             }).padding()
         }
     }

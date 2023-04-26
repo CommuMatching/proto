@@ -11,12 +11,12 @@ import FirebaseAuth
 
 
 class AppDelegate: NSObject, UIApplicationDelegate {
-  func application(_ application: UIApplication,
+    func application(_ application: UIApplication,
                    didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
-    FirebaseApp.configure()
-
-    return true
-  }
+        FirebaseApp.configure()
+        return true
+    }
+    
 }
 
 
@@ -28,7 +28,11 @@ struct protoApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            if Auth.auth().currentUser == nil {
+                Loginview()
+            }else{
+                ContentView()
+            }
         }
     }
 }

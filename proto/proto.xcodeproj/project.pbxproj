@@ -15,6 +15,7 @@
 		234F198F297CD4AB0060FC73 /* Homeview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234F198E297CD4AB0060FC73 /* Homeview.swift */; };
 		23553C27297E394A00E50FC0 /* Settingview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23553C26297E394A00E50FC0 /* Settingview.swift */; };
 		23553C29297E3BC200E50FC0 /* Reportview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23553C28297E3BC200E50FC0 /* Reportview.swift */; };
+		2360E5D029EF90EE004D82F9 /* Errorview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2360E5CF29EF90EE004D82F9 /* Errorview.swift */; };
 		237F131329E7FB2D004AD7A2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 237F131229E7FB2D004AD7A2 /* GoogleService-Info.plist */; };
 		237F131629E7FC2B004AD7A2 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 237F131529E7FC2B004AD7A2 /* FirebaseAuth */; };
 		237F131829E7FC2B004AD7A2 /* FirebaseAuthCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 237F131729E7FC2B004AD7A2 /* FirebaseAuthCombine-Community */; };
@@ -32,9 +33,9 @@
 		2384D270297C44FE00386949 /* protoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2384D26F297C44FE00386949 /* protoTests.swift */; };
 		2384D27A297C44FE00386949 /* protoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2384D279297C44FE00386949 /* protoUITests.swift */; };
 		2384D27C297C44FE00386949 /* protoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2384D27B297C44FE00386949 /* protoUITestsLaunchTests.swift */; };
+		23BD257E29EE771700F3C04E /* Loginview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BD257D29EE771700F3C04E /* Loginview.swift */; };
+		23BD258029EE7F6600F3C04E /* Design.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BD257F29EE7F6600F3C04E /* Design.swift */; };
 		23E159AC29A4E44E005E965C /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E159AB29A4E44E005E965C /* SearchBar.swift */; };
-		23F65FA229DFF2B700053407 /* Member+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F65FA029DFF2B700053407 /* Member+CoreDataClass.swift */; };
-		23F65FA329DFF2B700053407 /* Member+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F65FA129DFF2B700053407 /* Member+CoreDataProperties.swift */; };
 		69D319D8059A8B978776A5D3 /* Pods_proto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B73CC1AB64B6898A3CD63C73 /* Pods_proto.framework */; };
 		84D083419264368DF1BD1021 /* Pods_proto_protoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2903A076B4D415281999F57 /* Pods_proto_protoUITests.framework */; };
 		B67A15648B03315FF704107F /* Pods_protoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEF476532894A989D03E3CF4 /* Pods_protoTests.framework */; };
@@ -67,6 +68,7 @@
 		234F198E297CD4AB0060FC73 /* Homeview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Homeview.swift; sourceTree = "<group>"; };
 		23553C26297E394A00E50FC0 /* Settingview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settingview.swift; sourceTree = "<group>"; };
 		23553C28297E3BC200E50FC0 /* Reportview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reportview.swift; sourceTree = "<group>"; };
+		2360E5CF29EF90EE004D82F9 /* Errorview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errorview.swift; sourceTree = "<group>"; };
 		237F131229E7FB2D004AD7A2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		237F132129E7FF8C004AD7A2 /* Userauth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Userauth.swift; sourceTree = "<group>"; };
 		2384D256297C44FC00386949 /* proto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = proto.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -81,9 +83,9 @@
 		2384D275297C44FE00386949 /* protoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = protoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2384D279297C44FE00386949 /* protoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = protoUITests.swift; sourceTree = "<group>"; };
 		2384D27B297C44FE00386949 /* protoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = protoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		23BD257D29EE771700F3C04E /* Loginview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loginview.swift; sourceTree = "<group>"; };
+		23BD257F29EE7F6600F3C04E /* Design.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Design.swift; sourceTree = "<group>"; };
 		23E159AB29A4E44E005E965C /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
-		23F65FA029DFF2B700053407 /* Member+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Member+CoreDataClass.swift"; sourceTree = "<group>"; };
-		23F65FA129DFF2B700053407 /* Member+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Member+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		5E4DB5F65907CD28F508A11C /* Pods-proto-protoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-proto-protoUITests.release.xcconfig"; path = "Target Support Files/Pods-proto-protoUITests/Pods-proto-protoUITests.release.xcconfig"; sourceTree = "<group>"; };
 		83A4471A5F9C115D8C287D8F /* Pods-protoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-protoTests.debug.xcconfig"; path = "Target Support Files/Pods-protoTests/Pods-protoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AA11747B8A2F5BD3314ADCBE /* Pods-proto.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-proto.debug.xcconfig"; path = "Target Support Files/Pods-proto/Pods-proto.debug.xcconfig"; sourceTree = "<group>"; };
@@ -131,8 +133,6 @@
 		2384D24D297C44FC00386949 = {
 			isa = PBXGroup;
 			children = (
-				23F65FA029DFF2B700053407 /* Member+CoreDataClass.swift */,
-				23F65FA129DFF2B700053407 /* Member+CoreDataProperties.swift */,
 				2384D258297C44FC00386949 /* proto */,
 				2384D26E297C44FE00386949 /* protoTests */,
 				2384D278297C44FE00386949 /* protoUITests */,
@@ -161,17 +161,20 @@
 				2384D262297C44FE00386949 /* Persistence.swift */,
 				2384D264297C44FE00386949 /* proto.xcdatamodeld */,
 				2384D25F297C44FE00386949 /* Preview Content */,
+				23BD257D29EE771700F3C04E /* Loginview.swift */,
+				237F132129E7FF8C004AD7A2 /* Userauth.swift */,
 				234F198E297CD4AB0060FC73 /* Homeview.swift */,
-				23553C26297E394A00E50FC0 /* Settingview.swift */,
-				23553C28297E3BC200E50FC0 /* Reportview.swift */,
 				2301C6E2297FF5E900B7DC98 /* Mapview.swift */,
-				23E159AB29A4E44E005E965C /* SearchBar.swift */,
+				233E8A4429ADC3FB00918DEB /* MapModels.swift */,
+				23553C28297E3BC200E50FC0 /* Reportview.swift */,
+				23553C26297E394A00E50FC0 /* Settingview.swift */,
 				2347DB1329A881F500EECDB3 /* MemberList.swift */,
 				2347DB1529A8821200EECDB3 /* ClubList.swift */,
-				233E8A4429ADC3FB00918DEB /* MapModels.swift */,
 				237F131229E7FB2D004AD7A2 /* GoogleService-Info.plist */,
-				237F132129E7FF8C004AD7A2 /* Userauth.swift */,
+				23E159AB29A4E44E005E965C /* SearchBar.swift */,
 				234A2EA829EA8F92005CC6BF /* PasswordBar.swift */,
+				23BD257F29EE7F6600F3C04E /* Design.swift */,
+				2360E5CF29EF90EE004D82F9 /* Errorview.swift */,
 			);
 			path = proto;
 			sourceTree = "<group>";
@@ -480,16 +483,17 @@
 				23553C27297E394A00E50FC0 /* Settingview.swift in Sources */,
 				234A2EA929EA8F92005CC6BF /* PasswordBar.swift in Sources */,
 				23553C29297E3BC200E50FC0 /* Reportview.swift in Sources */,
-				23F65FA229DFF2B700053407 /* Member+CoreDataClass.swift in Sources */,
 				234F198F297CD4AB0060FC73 /* Homeview.swift in Sources */,
 				2301C6E3297FF5E900B7DC98 /* Mapview.swift in Sources */,
+				2360E5D029EF90EE004D82F9 /* Errorview.swift in Sources */,
+				23BD258029EE7F6600F3C04E /* Design.swift in Sources */,
 				237F132229E7FF8C004AD7A2 /* Userauth.swift in Sources */,
 				2384D25C297C44FC00386949 /* ContentView.swift in Sources */,
 				233E8A4529ADC3FB00918DEB /* MapModels.swift in Sources */,
 				2384D266297C44FE00386949 /* proto.xcdatamodeld in Sources */,
 				23E159AC29A4E44E005E965C /* SearchBar.swift in Sources */,
+				23BD257E29EE771700F3C04E /* Loginview.swift in Sources */,
 				2384D25A297C44FC00386949 /* protoApp.swift in Sources */,
-				23F65FA329DFF2B700053407 /* Member+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

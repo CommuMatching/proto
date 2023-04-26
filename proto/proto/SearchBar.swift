@@ -28,16 +28,13 @@ struct SearchBar: View {
     @Binding var text: String
     
     var body: some View {
-        
         VStack {
-            
             ZStack {
                 // background
                 //RoundedRectangle(cornerRadius: 8)
                 Capsule()
                     .fill(Color.white)
                     .frame(height: 50)
-                
                 HStack(spacing: 6) {
                     Spacer()
                         .frame(width: 0)
