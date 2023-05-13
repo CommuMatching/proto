@@ -9,43 +9,34 @@ import SwiftUI
 import FirebaseAuth
 
 struct ContentView: View {
-    enum bottomtab {
-        case home
-        case map
-        //case report
-        case setting
+    
+    init() {
+      // 背景色
+        UITabBar.appearance().backgroundColor = .white
     }
-    @State private var isShowingView: bottomtab = .home
     
     var body: some View {
         NavigationStack {
-            ZStack(/*spacing: .zero*/) {
-                switch isShowingView {
-                    case .home: Homeview()
-                    case .map: Mapview()
-                    //case .report: Reportview()
-                    case .setting: Settingview()
-                }
-            }
-            .toolbarBackground(.green, for: .bottomBar)
-            .toolbarBackground(.visible, for: .bottomBar)
-            .toolbar {
-                ToolbarItemGroup(placement: .bottomBar) {
-                    Button(action: {isShowingView = .home}) {
-                        Text("Home").yellowcircle()
-                    }
-                    Spacer()
-                    Button(action: {isShowingView = .map}) {
-                        Text("Map").yellowcircle()
-                    }
-                    Spacer()
-                    //Button("report"){isShowingView = .report}
-                    //Spacer()
-                    Button(action: {isShowingView = .setting}) {
-                        Text("Set").yellowcircle()
-                    }
-                }
-            }
+            TabView{
+                Homeview()
+                    .tabItem {
+                        Image(systemName: "house.fill")
+                    }.tag(1)
+                Mapview()
+                    .tabItem {
+                        Image(systemName: "map.fill")
+                    }.tag(2)
+                /*Reportview()
+                    .tabItem {
+                        Image(systemName: "bubble.left.fill")
+                            .font(.system(size: 20))
+                            .frame(width: 80,height: 45)
+                    }.tag(3)*/
+                Settingview()
+                    .tabItem {
+                        Image(systemName: "person.crop.circle.fill")
+                    }.tag(4)
+            }.accentColor(.black)
         }.navigationBarBackButtonHidden(true)
     }
 }

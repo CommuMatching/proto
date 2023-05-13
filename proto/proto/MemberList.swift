@@ -10,20 +10,17 @@ import SwiftUI
 struct MemberList: View {
     
     var body: some View {
-        VStack(spacing: UIScreen.main.bounds.height/64){
-                HStack(spacing: UIScreen.main.bounds.width/4) {
-                    NavigationView {
-                        let members = ["member1"]
-                        List{
-                            ForEach(0 ..< members.count, id: \.self) { index in
-                                    NavigationLink(destination: Text(members[index])) {
-                                    Text(members[index])
-                                }
-                            }
+        HStack(spacing: UIScreen.main.bounds.width/4) {
+            NavigationView {
+                let members = ["member1"]
+                List{
+                    ForEach(0 ..< members.count, id: \.self) { index in
+                            NavigationLink(destination: Text(members[index])) {
+                            Text(members[index])
                         }
                     }
-                    Spacer()
                 }
+            }
             Spacer()
         }
     }

@@ -28,13 +28,13 @@ struct SearchBar: View {
     @Binding var text: String
     
     var body: some View {
-        VStack {
+        NavigationStack {
             ZStack {
                 // background
                 //RoundedRectangle(cornerRadius: 8)
                 Capsule()
                     .fill(Color.white)
-                    .frame(height: 50)
+                    .frame(height: 40)
                 HStack(spacing: 6) {
                     Spacer()
                         .frame(width: 0)
@@ -45,7 +45,7 @@ struct SearchBar: View {
                     // TextField
                     TextField("", text: $text)
                         .placeholder(when: text.isEmpty, color: .gray) {
-                            Text("Search")
+                            Text("検索")
                         }
                     
                     if !text.isEmpty {
@@ -54,12 +54,12 @@ struct SearchBar: View {
                         } label: {
                             Image(systemName: "xmark.circle.fill")
                                 .foregroundColor(.gray)
+                                .opacity(0.7)
                         }
                         .padding(.trailing, 6)
                     }
                 }
-            }
-            .padding(.horizontal)
+            }.padding(.horizontal)
         }
     }
 }

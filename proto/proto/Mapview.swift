@@ -22,6 +22,7 @@ struct Mapview: View {
             longitudinalMeters: 1000.0 // 東西
         )
     @State private var searchText = ""
+    @FocusState private var focusedField: Bool
     
     func geocode(completionHandler: @escaping (CLLocationCoordinate2D? , Error?) -> (), errorHandler: @escaping () -> ()){
         
@@ -71,15 +72,24 @@ struct Mapview: View {
     }
     
     var body: some View {
-        NavigationView {
+        
+        NavigationStack {
             ZStack(alignment: .top){
                 Map(coordinateRegion: searchText == "" ? $manager.region : self.$region,interactionModes: .all,showsUserLocation: true,userTrackingMode: searchText == "" ? $trackingMode : .none)
-                    .edgesIgnoringSafeArea(.top)
+                    .edgesIgnoringSafeArea(.all)
                 SearchBar(text: $searchText)
                     .onSubmit {
                         reloadRegion(address: searchText)
-                  }
-            }
+                  }.focused($focusedField)
+                    .toolbar {
+                        ToolbarItemGroup(placement: .keyboard){
+                            Spacer()
+                            Button("Close"){
+                                self.focusedField = false
+                            }
+                        }
+                    }
+            }.navigationBarHidden(true)
         }
     }
 }

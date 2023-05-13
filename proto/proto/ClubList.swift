@@ -22,10 +22,6 @@ struct ClubList: View {
                 }
             }
         }
-        /*VStack(spacing: UIScreen.main.bounds.height/64){
-            
-            Spacer()
-        }*/
     }
 }
 

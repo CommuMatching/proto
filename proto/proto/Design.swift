@@ -9,16 +9,6 @@ import SwiftUI
 
 
 extension View {
-    func yellowcircle() -> some View{
-        return bold()
-            .padding()
-            .frame(width: 80, height: 70)
-            .foregroundColor(Color.black)
-            .overlay(
-                Circle()
-                    .stroke(Color.yellow, lineWidth: 3)
-            )
-    }
     
     func textfieldframe(linewid: CGFloat) -> some View{
         return overlay(
@@ -28,11 +18,11 @@ extension View {
                 ).padding(16.0)
     }
     
-    func decisionbutton() -> some View{
+    func decisionbutton(isable: Bool) -> some View{
         return padding()
             .frame(width: 120, height: 50)
-            .foregroundColor(Color.white)
-            .background(Color.blue)
+            .foregroundColor(.white)
+            .background(isable ? .blue : .gray)
             .cornerRadius(25)
     }
 }

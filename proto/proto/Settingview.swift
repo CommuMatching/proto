@@ -10,27 +10,46 @@ import FirebaseAuth
 
 struct Settingview: View {
     @State private var activie = false
+    @State var introduction = "ここに紹介文"
     
     var body: some View {
+        let user = Auth.auth().currentUser
         NavigationStack {
-
-            let settings = ["User","Policy","News"]
-            List{
-                ForEach(0 ..< settings.count, id: \.self) { index in
-                        NavigationLink(destination: Text(settings[index])) {
-                        Text(settings[index])
-                        }
+            VStack {
+                VStack {
+                    HStack {
+                        icon()
+                            .padding(.leading)
+                            .padding(.top)
+                            .padding(.trailing)
+                        Spacer()
+                    }
+                    HStack {
+                        VStack(alignment: .leading) {
+                            Text(user?.displayName ?? "ユーザー未登録")
+                            Text(introduction)
+                        }.padding()
+                        Spacer()
+                    }
                 }
-                NavigationLink(destination: Button(action: {
-                    do {
-                        try Auth.auth().signOut()
-                        activie.toggle()
-                    } catch let signOutError as NSError {
-                        print("Error signing out: %@", signOutError)
-                        }
-                    }, label: {Text("LogOut")}
-                )) {
-                Text("Log out")
+                let settings = ["アカウント","Policy","News"]
+                List{
+                    ForEach(0 ..< settings.count, id: \.self) { index in
+                            NavigationLink(destination: Text(settings[index])) {
+                            Text(settings[index])
+                            }
+                    }
+                    NavigationLink(destination: Button(action: {
+                        do {
+                            try Auth.auth().signOut()
+                            activie.toggle()
+                        } catch let signOutError as NSError {
+                            print("Error signing out: %@", signOutError)
+                            }
+                    }, label: {Text("ログアウト").decisionbutton(isable: true)}
+                    )) {
+                        Text("Log Out")
+                    }
                 }
             }
         }.navigationDestination(isPresented: $activie, destination: {

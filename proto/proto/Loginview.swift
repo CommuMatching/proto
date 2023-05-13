@@ -17,83 +17,83 @@ struct Loginview: View {
     @State public var password = ""
     @State public var errorMessage = ""
     @FocusState private var focusedField: Field?
-    @State private var activie = false
+    @State private var signin = false
+    @State private var tosignup = false
+    @State private var err = false
     
     var body: some View {
         NavigationStack{
-            VStack(spacing: 30){
-                // メールアドレス
-                TextField("メールアドレス", text: $mail)
-                    .focused($focusedField, equals: .Mail)
-                    .toolbar{
-                        ToolbarItem(placement: .keyboard){
-                            HStack{
+            VStack(spacing: 40){
+                VStack(spacing: 30){
+                    // メールアドレス
+                    TextFieldwithClearButton(placeholder: "メールアドレス", text: $mail)
+                        .focused($focusedField, equals: .Mail)
+                        .toolbar{
+                            ToolbarItem(placement: .keyboard){
+                                HStack{
+                                    Spacer()
+                                    Button("Close"){
+                                        self.focusedField = nil
+                                    }
+                                }
+                            }
+                        }
+                        .textfieldframe(linewid: (focusedField == .Mail) ? 4.0 : 2.0)
+                    
+                        
+                    // パスワード
+                    PasswordBar(password:$password)
+                        .focused($focusedField, equals: .Password)
+                        .toolbar{
+                            ToolbarItemGroup(placement: .keyboard){
                                 Spacer()
                                 Button("Close"){
                                     self.focusedField = nil
                                 }
                             }
                         }
-                    }
-                    .textfieldframe(linewid: (focusedField == .Mail) ? 4.0 : 2.0)
-                
+                        .textfieldframe(linewid: (focusedField == .Password) ? 4.0 : 2.0)
                     
-                // パスワード
-                PasswordBar(password:$password)
-                    .focused($focusedField, equals: .Password)
-                    .toolbar{
-                        ToolbarItemGroup(placement: .keyboard){
-                            Spacer()
-                            Button("Close"){
-                                self.focusedField = nil
-                            }
-                        }
-                    }
-                
-                // 認証
-                Button(
-                    action:{
-                        if(mail == ""){
-                            self.errorMessage = "メールアドレスが入力されていません"
-                        } else if(self.password == ""){
-                            self.errorMessage = "パスワードが入力されていません"
-                        } else {
+                    // 認証
+                    Button(
+                        action:{
                             // 認証する処理
                             Auth.auth().signIn(withEmail: self.mail, password: self.password) { authResult, error in
-                            if authResult?.user != nil {
-                                // ログイン成功時、画面遷移
-                                activie.toggle()
-                            } else {
-                                // ログイン失敗処理
-                                if let error = error as NSError?, let errorCode = AuthErrorCode.Code(rawValue: error.code) {
-                                    switch errorCode {
-                                        case .invalidEmail:
-                                            self.errorMessage = "メールアドレスの形式が正しくありません"
-                                        case .emailAlreadyInUse:
-                                            self.errorMessage = "このメールアドレスはすでに使われています。"
-                                        case .weakPassword:
-                                            self.errorMessage = "パスワードが弱すぎます。"
-                                        case .userNotFound, .wrongPassword:
-                                            self.errorMessage = "メールアドレス、またはパスワードが間違っています"
-                                        case .userDisabled:
-                                            self.errorMessage = "このユーザーアカウントは無効化されています"
-                                        default:
-                                            self.errorMessage = error.domain
-                                        }
-                                    }
+                                if authResult?.user != nil {
+                                    // ログイン成功時、画面遷移
+                                    signin.toggle()
+                                } else {
+                                    // ログイン失敗処理
+                                    self.errorMessage = setErrorMessage(error)
+                                    err.toggle()
                                 }
                             }
-                        }
-                        if errorMessage != "" {
-                            print(errorMessage)
-                        }
-                    }, label:{
-                        Text("ログイン")
-                            .decisionbutton()
+                        }, label:{
+                            Text("ログイン")
+                                .decisionbutton(isable: !(mail.isEmpty || password.isEmpty))
+                        }).alert(isPresented: $err) {
+                            Alert(title: Text(errorMessage))
+                        }.disabled(mail.isEmpty || password.isEmpty)
+                }.navigationDestination(isPresented: $signin, destination: {
+                    ContentView()
+                })
+                
+                HStack(alignment: .bottom){
+                    Text("アカウントをお持ちでない方は")
+                        .font(.caption)
+                        .opacity(0.5)
+                    Button(action: {
+                        tosignup.toggle()
+                    },label:  {
+                        Text("新規登録")
+                            .font(.caption)
+                            .opacity(0.7)
+                        
                     })
-            }.navigationDestination(isPresented: $activie, destination: {
-                ContentView()
-            })
+                }.navigationDestination(isPresented: $tosignup, destination: {
+                    Userauthview()
+                })
+            }
         }.navigationBarBackButtonHidden(true)
     }
 }
