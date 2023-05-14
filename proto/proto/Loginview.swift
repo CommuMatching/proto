@@ -72,7 +72,7 @@ struct Loginview: View {
                             Text("ログイン")
                                 .decisionbutton(isable: !(mail.isEmpty || password.isEmpty))
                         }).alert(isPresented: $err) {
-                            Alert(title: Text(errorMessage))
+                            Alert(title: Text(errorMessage), dismissButton: .destructive(Text("OK")))
                         }.disabled(mail.isEmpty || password.isEmpty)
                 }.navigationDestination(isPresented: $signin, destination: {
                     ContentView()

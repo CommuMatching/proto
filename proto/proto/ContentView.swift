@@ -12,7 +12,7 @@ struct ContentView: View {
     
     init() {
       // 背景色
-        UITabBar.appearance().backgroundColor = .white
+        UITabBar.appearance().backgroundColor = .systemBackground
     }
     
     var body: some View {
@@ -36,7 +36,7 @@ struct ContentView: View {
                     .tabItem {
                         Image(systemName: "person.crop.circle.fill")
                     }.tag(4)
-            }.accentColor(.black)
+            }.accentColor(.TextColor)
         }.navigationBarBackButtonHidden(true)
     }
 }

@@ -96,7 +96,7 @@ struct Userauthview: View {
             })
             .padding()
             .alert(isPresented: $err) {
-                Alert(title: Text(errorMessage))
+                Alert(title: Text(errorMessage).foregroundColor(Color.ErrorColor))
             }
             .disabled(name.isEmpty || mail.isEmpty || password.isEmpty)
             .navigationDestination(isPresented: $signup, destination: {

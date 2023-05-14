@@ -26,9 +26,13 @@ struct icon: View {
                             self.source = .camera
                             self.isImagePicker.toggle()
                         })
-                        Button("削除", action: {
-                            self.profile.Iconimage = .init(capacity:0)
-                        })
+                        if (self.profile.Iconimage != .init(capacity:0)) {
+                            Button(role: .destructive, action: {
+                                self.profile.Iconimage = .init(capacity:0)
+                            }, label: {
+                                Text("削除")
+                            })
+                        }
                     } label: {
                         if (self.profile.Iconimage != .init(capacity:0)) {
                             Image(uiImage: UIImage(data: self.profile.Iconimage)!)

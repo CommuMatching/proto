@@ -17,6 +17,7 @@ struct MemberList: View {
                     ForEach(0 ..< members.count, id: \.self) { index in
                             NavigationLink(destination: Text(members[index])) {
                             Text(members[index])
+                                    .foregroundColor(Color.TextColor)
                         }
                     }
                 }

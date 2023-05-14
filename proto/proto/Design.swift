@@ -6,7 +6,13 @@
 //
 
 import SwiftUI
+import Foundation
 
+extension Color {
+    static let TextColor = Color("TextColor")
+    static let BackgroundColor = Color("BackgroundColor")
+    static let ErrorColor = Color("ErrorColor")
+}
 
 extension View {
     

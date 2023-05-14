@@ -10,7 +10,7 @@ import FirebaseAuth
 
 struct Settingview: View {
     @State private var activie = false
-    @State var introduction = "ここに紹介文"
+    @ObservedObject var profile = UserProfile()
     
     var body: some View {
         let user = Auth.auth().currentUser
@@ -26,8 +26,11 @@ struct Settingview: View {
                     }
                     HStack {
                         VStack(alignment: .leading) {
-                            Text(user?.displayName ?? "ユーザー未登録")
-                            Text(introduction)
+                            Text(user?.displayName ?? "ゲスト")
+                                .foregroundColor(Color.TextColor)
+                                .bold()
+                            Text(profile.Introduction)
+                                .foregroundColor(Color.TextColor)
                         }.padding()
                         Spacer()
                     }
@@ -36,7 +39,7 @@ struct Settingview: View {
                 List{
                     ForEach(0 ..< settings.count, id: \.self) { index in
                             NavigationLink(destination: Text(settings[index])) {
-                            Text(settings[index])
+                                Text(settings[index]).foregroundColor(Color.TextColor)
                             }
                     }
                     NavigationLink(destination: Button(action: {

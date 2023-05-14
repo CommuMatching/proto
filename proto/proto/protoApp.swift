@@ -23,8 +23,6 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 @main
 struct protoApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
-    
-    let persistenceController = PersistenceController.shared
 
     var body: some Scene {
         WindowGroup {

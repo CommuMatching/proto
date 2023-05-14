@@ -16,10 +16,6 @@
 		23553C27297E394A00E50FC0 /* Settingview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23553C26297E394A00E50FC0 /* Settingview.swift */; };
 		23553C29297E3BC200E50FC0 /* Reportview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23553C28297E3BC200E50FC0 /* Reportview.swift */; };
 		235E1E3029FCD31600ADADDF /* TextFieldwithClearButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235E1E2F29FCD31600ADADDF /* TextFieldwithClearButton.swift */; };
-		235E299229FF48D900A0958B /* IconModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235E299129FF48D900A0958B /* IconModel.swift */; };
-		235E979929FF52BB0065A990 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235E979829FF52BB0065A990 /* Persistence.swift */; };
-		235E979B29FF532C0065A990 /* IconData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235E979A29FF532C0065A990 /* IconData+CoreDataProperties.swift */; };
-		235E979D29FF53310065A990 /* IconData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235E979C29FF53310065A990 /* IconData+CoreDataClass.swift */; };
 		23605DDC29FE266600616B0F /* Imagepicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23605DDB29FE266600616B0F /* Imagepicker.swift */; };
 		23605DDE29FE278500616B0F /* icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23605DDD29FE278500616B0F /* icon.swift */; };
 		2360E5D029EF90EE004D82F9 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2360E5CF29EF90EE004D82F9 /* Error.swift */; };
@@ -39,7 +35,6 @@
 		2384D270297C44FE00386949 /* protoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2384D26F297C44FE00386949 /* protoTests.swift */; };
 		2384D27A297C44FE00386949 /* protoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2384D279297C44FE00386949 /* protoUITests.swift */; };
 		2384D27C297C44FE00386949 /* protoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2384D27B297C44FE00386949 /* protoUITestsLaunchTests.swift */; };
-		23A6F6CA2A0A551B00653637 /* Setprofileview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A6F6C92A0A551B00653637 /* Setprofileview.swift */; };
 		23BD257E29EE771700F3C04E /* Loginview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BD257D29EE771700F3C04E /* Loginview.swift */; };
 		23BD258029EE7F6600F3C04E /* Design.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BD257F29EE7F6600F3C04E /* Design.swift */; };
 		23E159AC29A4E44E005E965C /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E159AB29A4E44E005E965C /* SearchBar.swift */; };
@@ -77,10 +72,6 @@
 		23553C26297E394A00E50FC0 /* Settingview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settingview.swift; sourceTree = "<group>"; };
 		23553C28297E3BC200E50FC0 /* Reportview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reportview.swift; sourceTree = "<group>"; };
 		235E1E2F29FCD31600ADADDF /* TextFieldwithClearButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldwithClearButton.swift; sourceTree = "<group>"; };
-		235E299129FF48D900A0958B /* IconModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconModel.swift; sourceTree = "<group>"; };
-		235E979829FF52BB0065A990 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
-		235E979A29FF532C0065A990 /* IconData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "IconData+CoreDataProperties.swift"; path = "/Users/tama/Github/Commu_matching/proto/proto/proto/IconData+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
-		235E979C29FF53310065A990 /* IconData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "IconData+CoreDataClass.swift"; path = "/Users/tama/Github/Commu_matching/proto/proto/proto/IconData+CoreDataClass.swift"; sourceTree = "<absolute>"; };
 		23605DDB29FE266600616B0F /* Imagepicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Imagepicker.swift; sourceTree = "<group>"; };
 		23605DDD29FE278500616B0F /* icon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = icon.swift; sourceTree = "<group>"; };
 		2360E5CF29EF90EE004D82F9 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
@@ -97,7 +88,6 @@
 		2384D275297C44FE00386949 /* protoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = protoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2384D279297C44FE00386949 /* protoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = protoUITests.swift; sourceTree = "<group>"; };
 		2384D27B297C44FE00386949 /* protoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = protoUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		23A6F6C92A0A551B00653637 /* Setprofileview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setprofileview.swift; sourceTree = "<group>"; };
 		23BD257D29EE771700F3C04E /* Loginview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loginview.swift; sourceTree = "<group>"; };
 		23BD257F29EE7F6600F3C04E /* Design.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Design.swift; sourceTree = "<group>"; };
 		23E159AB29A4E44E005E965C /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
@@ -173,9 +163,6 @@
 			children = (
 				2384D259297C44FC00386949 /* protoApp.swift */,
 				2384D25B297C44FC00386949 /* ContentView.swift */,
-				235E979C29FF53310065A990 /* IconData+CoreDataClass.swift */,
-				235E979A29FF532C0065A990 /* IconData+CoreDataProperties.swift */,
-				235E979829FF52BB0065A990 /* Persistence.swift */,
 				2384D25D297C44FE00386949 /* Assets.xcassets */,
 				2384D264297C44FE00386949 /* proto.xcdatamodeld */,
 				2384D25F297C44FE00386949 /* Preview Content */,
@@ -186,7 +173,6 @@
 				233E8A4429ADC3FB00918DEB /* MapModels.swift */,
 				23553C28297E3BC200E50FC0 /* Reportview.swift */,
 				23553C26297E394A00E50FC0 /* Settingview.swift */,
-				23A6F6C92A0A551B00653637 /* Setprofileview.swift */,
 				2347DB1329A881F500EECDB3 /* MemberList.swift */,
 				2347DB1529A8821200EECDB3 /* ClubList.swift */,
 				23E159AB29A4E44E005E965C /* SearchBar.swift */,
@@ -197,7 +183,6 @@
 				23605DDD29FE278500616B0F /* icon.swift */,
 				23E9B09D2A0F19DA005F361D /* UserProfile.swift */,
 				23605DDB29FE266600616B0F /* Imagepicker.swift */,
-				235E299129FF48D900A0958B /* IconModel.swift */,
 				237F131229E7FB2D004AD7A2 /* GoogleService-Info.plist */,
 			);
 			path = proto;
@@ -504,15 +489,10 @@
 				2347DB1429A881F500EECDB3 /* MemberList.swift in Sources */,
 				2347DB1629A8821200EECDB3 /* ClubList.swift in Sources */,
 				235E1E3029FCD31600ADADDF /* TextFieldwithClearButton.swift in Sources */,
-				235E979929FF52BB0065A990 /* Persistence.swift in Sources */,
 				23553C27297E394A00E50FC0 /* Settingview.swift in Sources */,
 				234A2EA929EA8F92005CC6BF /* PasswordBar.swift in Sources */,
 				23553C29297E3BC200E50FC0 /* Reportview.swift in Sources */,
-				23A6F6CA2A0A551B00653637 /* Setprofileview.swift in Sources */,
 				234F198F297CD4AB0060FC73 /* Homeview.swift in Sources */,
-				235E979B29FF532C0065A990 /* IconData+CoreDataProperties.swift in Sources */,
-				235E299229FF48D900A0958B /* IconModel.swift in Sources */,
-				235E979D29FF53310065A990 /* IconData+CoreDataClass.swift in Sources */,
 				2301C6E3297FF5E900B7DC98 /* Mapview.swift in Sources */,
 				2360E5D029EF90EE004D82F9 /* Error.swift in Sources */,
 				23BD258029EE7F6600F3C04E /* Design.swift in Sources */,

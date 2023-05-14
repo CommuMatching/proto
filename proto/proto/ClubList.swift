@@ -17,6 +17,7 @@ struct ClubList: View {
                     ForEach(0 ..< clubs.count, id: \.self) { index in
                             NavigationLink(destination: Text(clubs[index])) {
                             Text(clubs[index])
+                                .foregroundColor(Color.TextColor)
                         }
                     }
                 }
