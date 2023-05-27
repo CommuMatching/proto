@@ -1,5 +1,5 @@
 //
-//  Userauthview.swift
+//  Signupview.swift
 //  proto
 //
 //  Created by 玉川悠真 on 2023/04/13.
@@ -7,8 +7,9 @@
 
 import SwiftUI
 import FirebaseAuth
+import FirebaseDatabase
 
-struct Userauthview: View {
+struct Signupview: View {
     enum Field {
         case Name
         case Mail
@@ -21,6 +22,9 @@ struct Userauthview: View {
     @FocusState private var focusedField: Field?
     @State private var err = false
     @State private var signup = false
+    @State var isPresentedProgressView = false
+    
+    var ref: DatabaseReference! = Database.database().reference()
         
     var body: some View {
         VStack {
@@ -65,6 +69,7 @@ struct Userauthview: View {
                 .textfieldframe(linewid: (focusedField == .Password) ? 4.0 : 2.0)
                 
             Button(action: {
+                self.focusedField = nil
                 Auth.auth().createUser(withEmail: self.mail, password: self.password) { authResult, error in
                     if let user = authResult?.user {
                         let request = user.createProfileChangeRequest()
@@ -74,7 +79,12 @@ struct Userauthview: View {
                                 user.sendEmailVerification() { error in
                                     if error == nil {
                                         //新規登録成功時、画面遷移
-                                        signup.toggle()
+                                        isPresentedProgressView = true
+                                        DispatchQueue.main.async {
+                                            self.isPresentedProgressView = false
+                                            signup.toggle()
+                                        }
+                                        self.ref.child("users").child(user.uid).setValue(["username": (self.name)])
                                     } else {
                                         self.errorMessage = setErrorMessage(error)
                                         err.toggle()
@@ -106,8 +116,8 @@ struct Userauthview: View {
     }
 }
 
-struct Userauthview_Previews: PreviewProvider {
+struct Signupview_Previews: PreviewProvider {
     static var previews: some View {
-        Userauthview()
+        Signupview()
     }
 }

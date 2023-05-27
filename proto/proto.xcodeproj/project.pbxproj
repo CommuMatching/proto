@@ -26,7 +26,7 @@
 		237F131C29E7FC2B004AD7A2 /* FirebaseDatabaseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 237F131B29E7FC2B004AD7A2 /* FirebaseDatabaseSwift */; };
 		237F131E29E7FC2B004AD7A2 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 237F131D29E7FC2B004AD7A2 /* FirebaseStorage */; };
 		237F132029E7FC2B004AD7A2 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 237F131F29E7FC2B004AD7A2 /* FirebaseStorageCombine-Community */; };
-		237F132229E7FF8C004AD7A2 /* Userauthview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237F132129E7FF8C004AD7A2 /* Userauthview.swift */; };
+		237F132229E7FF8C004AD7A2 /* Signupview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237F132129E7FF8C004AD7A2 /* Signupview.swift */; };
 		2384D25A297C44FC00386949 /* protoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2384D259297C44FC00386949 /* protoApp.swift */; };
 		2384D25C297C44FC00386949 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2384D25B297C44FC00386949 /* ContentView.swift */; };
 		2384D25E297C44FE00386949 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2384D25D297C44FE00386949 /* Assets.xcassets */; };
@@ -76,7 +76,7 @@
 		23605DDD29FE278500616B0F /* icon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = icon.swift; sourceTree = "<group>"; };
 		2360E5CF29EF90EE004D82F9 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		237F131229E7FB2D004AD7A2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		237F132129E7FF8C004AD7A2 /* Userauthview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Userauthview.swift; sourceTree = "<group>"; };
+		237F132129E7FF8C004AD7A2 /* Signupview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Signupview.swift; sourceTree = "<group>"; };
 		2384D256297C44FC00386949 /* proto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = proto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2384D259297C44FC00386949 /* protoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = protoApp.swift; sourceTree = "<group>"; };
 		2384D25B297C44FC00386949 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -167,12 +167,15 @@
 				2384D264297C44FE00386949 /* proto.xcdatamodeld */,
 				2384D25F297C44FE00386949 /* Preview Content */,
 				23BD257D29EE771700F3C04E /* Loginview.swift */,
-				237F132129E7FF8C004AD7A2 /* Userauthview.swift */,
+				237F132129E7FF8C004AD7A2 /* Signupview.swift */,
 				234F198E297CD4AB0060FC73 /* Homeview.swift */,
 				2301C6E2297FF5E900B7DC98 /* Mapview.swift */,
 				233E8A4429ADC3FB00918DEB /* MapModels.swift */,
 				23553C28297E3BC200E50FC0 /* Reportview.swift */,
 				23553C26297E394A00E50FC0 /* Settingview.swift */,
+				23E9B09D2A0F19DA005F361D /* UserProfile.swift */,
+				23605DDD29FE278500616B0F /* icon.swift */,
+				23605DDB29FE266600616B0F /* Imagepicker.swift */,
 				2347DB1329A881F500EECDB3 /* MemberList.swift */,
 				2347DB1529A8821200EECDB3 /* ClubList.swift */,
 				23E159AB29A4E44E005E965C /* SearchBar.swift */,
@@ -180,9 +183,6 @@
 				234A2EA829EA8F92005CC6BF /* PasswordBar.swift */,
 				23BD257F29EE7F6600F3C04E /* Design.swift */,
 				2360E5CF29EF90EE004D82F9 /* Error.swift */,
-				23605DDD29FE278500616B0F /* icon.swift */,
-				23E9B09D2A0F19DA005F361D /* UserProfile.swift */,
-				23605DDB29FE266600616B0F /* Imagepicker.swift */,
 				237F131229E7FB2D004AD7A2 /* GoogleService-Info.plist */,
 			);
 			path = proto;
@@ -496,7 +496,7 @@
 				2301C6E3297FF5E900B7DC98 /* Mapview.swift in Sources */,
 				2360E5D029EF90EE004D82F9 /* Error.swift in Sources */,
 				23BD258029EE7F6600F3C04E /* Design.swift in Sources */,
-				237F132229E7FF8C004AD7A2 /* Userauthview.swift in Sources */,
+				237F132229E7FF8C004AD7A2 /* Signupview.swift in Sources */,
 				2384D25C297C44FC00386949 /* ContentView.swift in Sources */,
 				23E9B09E2A0F19DA005F361D /* UserProfile.swift in Sources */,
 				233E8A4529ADC3FB00918DEB /* MapModels.swift in Sources */,

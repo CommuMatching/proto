@@ -39,7 +39,6 @@ struct Loginview: View {
                             }
                         }
                         .textfieldframe(linewid: (focusedField == .Mail) ? 4.0 : 2.0)
-                    
                         
                     // パスワード
                     PasswordBar(password:$password)
@@ -57,6 +56,7 @@ struct Loginview: View {
                     // 認証
                     Button(
                         action:{
+                            self.focusedField = nil
                             // 認証する処理
                             Auth.auth().signIn(withEmail: self.mail, password: self.password) { authResult, error in
                                 if authResult?.user != nil {
@@ -91,7 +91,7 @@ struct Loginview: View {
                         
                     })
                 }.navigationDestination(isPresented: $tosignup, destination: {
-                    Userauthview()
+                    Signupview()
                 })
             }
         }.navigationBarBackButtonHidden(true)

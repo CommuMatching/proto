@@ -6,8 +6,11 @@
 //
 
 import SwiftUI
+import FirebaseDatabase
 
 struct Homeview: View {
+    var ref: DatabaseReference! = Database.database().reference()
+    
     @State private var memv: Bool = false
     @State private var clbv: Bool = false
     @State public var x_from_dragstart:CGFloat = 0
