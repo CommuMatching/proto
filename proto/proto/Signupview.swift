@@ -22,51 +22,66 @@ struct Signupview: View {
     @FocusState private var focusedField: Field?
     @State private var err = false
     @State private var signup = false
-    @State var isPresentedProgressView = false
     
     var ref: DatabaseReference! = Database.database().reference()
         
     var body: some View {
-        VStack {
-            TextFieldwithClearButton(placeholder: "名前", text: $name)
-                .focused($focusedField, equals: .Name)
-                .toolbar {
-                    ToolbarItem(placement: .keyboard){
-                        HStack{
-                            Spacer()
-                            Button("Close"){
-                                self.focusedField = nil
+        VStack(spacing: 30) {
+            VStack(alignment: .leading, spacing: 0.0) {
+                Text("ユーザーネーム")
+                    .foregroundColor(.TextColor)
+                    .padding(.leading, 8)
+                TextFieldwithClearButton(placeholder: "Taro", text: $name)
+                    .focused($focusedField, equals: .Name)
+                    .toolbar {
+                        ToolbarItem(placement: .keyboard) {
+                            HStack {
+                                Spacer()
+                                Button("Close") {
+                                    self.focusedField = nil
+                                }
                             }
                         }
                     }
-                }
-                .textfieldframe(linewid: (focusedField == .Name) ? 4.0 : 2.0)
-                
-            TextFieldwithClearButton(placeholder: "メールアドレス", text: $mail)
-                .focused($focusedField, equals: .Mail)
-                .toolbar {
-                    ToolbarItem(placement: .keyboard){
-                        HStack{
-                            Spacer()
-                            Button("Close"){
-                                self.focusedField = nil
-                            }
-                        }
-                    }
-                }
-                .textfieldframe(linewid: (focusedField == .Mail) ? 4.0 : 2.0)
+                    .textfieldframe(linewid: (focusedField == .Name) ? 4.0 : 2.0)
+            }
             
-            PasswordBar(password: $password)
-                .focused($focusedField, equals: .Password)
-                .toolbar {
-                    ToolbarItemGroup(placement: .keyboard) {
-                        Spacer()
-                        Button("Close") {
-                            self.focusedField = nil
+            VStack(alignment: .leading, spacing: 0.0) {
+                Text("メールアドレス")
+                    .foregroundColor(.TextColor)
+                    .padding(.leading, 8)
+                TextFieldwithClearButton(placeholder: "example@~", text: $mail)
+                    .focused($focusedField, equals: .Mail)
+                    .toolbar {
+                        ToolbarItem(placement: .keyboard) {
+                            HStack{
+                                Spacer()
+                                Button("Close") {
+                                    self.focusedField = nil
+                                }
+                            }
                         }
                     }
-                }
-                .textfieldframe(linewid: (focusedField == .Password) ? 4.0 : 2.0)
+                    .textfieldframe(linewid: (focusedField == .Mail) ? 4.0 : 2.0)
+                    .keyboardType(.emailAddress)
+            }
+            
+            VStack(alignment: .leading, spacing: 0.0) {
+                Text("パスワード")
+                    .foregroundColor(.TextColor)
+                    .padding(.leading, 8)
+                PasswordBar(password: $password)
+                    .focused($focusedField, equals: .Password)
+                    .toolbar {
+                        ToolbarItemGroup(placement: .keyboard) {
+                            Spacer()
+                            Button("Close") {
+                                self.focusedField = nil
+                            }
+                        }
+                    }
+                    .textfieldframe(linewid: (focusedField == .Password) ? 4.0 : 2.0)
+            }
                 
             Button(action: {
                 self.focusedField = nil
@@ -79,12 +94,10 @@ struct Signupview: View {
                                 user.sendEmailVerification() { error in
                                     if error == nil {
                                         //新規登録成功時、画面遷移
-                                        isPresentedProgressView = true
                                         DispatchQueue.main.async {
-                                            self.isPresentedProgressView = false
                                             signup.toggle()
                                         }
-                                        self.ref.child("users").child(user.uid).setValue(["username": (self.name)])
+                                        self.ref.child("users/\(user.uid)").setValue(["username": (self.name)])
                                     } else {
                                         self.errorMessage = setErrorMessage(error)
                                         err.toggle()
@@ -101,7 +114,7 @@ struct Signupview: View {
                     }
                 }
             }, label: {
-                Text("新規登録")
+                Text("登  録")
                     .decisionbutton(isable: !(name.isEmpty || mail.isEmpty || password.isEmpty))
             })
             .padding()

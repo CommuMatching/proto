@@ -23,6 +23,10 @@ struct Settingview: View {
                             .padding(.top)
                             .padding(.trailing)
                         Spacer()
+                        Image(systemName: "gearshape")
+                            .resizable()
+                            .frame(width: 30, height: 30)
+                            .padding(.trailing)
                     }
                     HStack {
                         VStack(alignment: .leading) {
@@ -35,8 +39,11 @@ struct Settingview: View {
                         Spacer()
                     }
                 }
-                let settings = ["アカウント","Policy","News"]
+                let settings = ["Policy", "News"]
                 List{
+                    NavigationLink(destination: Createcommunityview()) {
+                        Text("コミュニティを作る")
+                    }
                     ForEach(0 ..< settings.count, id: \.self) { index in
                             NavigationLink(destination: Text(settings[index])) {
                                 Text(settings[index]).foregroundColor(Color.TextColor)
@@ -51,7 +58,7 @@ struct Settingview: View {
                             }
                     }, label: {Text("ログアウト").decisionbutton(isable: true)}
                     )) {
-                        Text("Log Out")
+                        Text("ログアウト")
                     }
                 }
             }

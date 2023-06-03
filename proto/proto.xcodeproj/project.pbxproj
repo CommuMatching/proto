@@ -10,11 +10,14 @@
 		2301C6E3297FF5E900B7DC98 /* Mapview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2301C6E2297FF5E900B7DC98 /* Mapview.swift */; };
 		233E8A4529ADC3FB00918DEB /* MapModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233E8A4429ADC3FB00918DEB /* MapModels.swift */; };
 		2347DB1429A881F500EECDB3 /* MemberList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2347DB1329A881F500EECDB3 /* MemberList.swift */; };
-		2347DB1629A8821200EECDB3 /* ClubList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2347DB1529A8821200EECDB3 /* ClubList.swift */; };
+		2347DB1629A8821200EECDB3 /* CommunityList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2347DB1529A8821200EECDB3 /* CommunityList.swift */; };
 		234A2EA929EA8F92005CC6BF /* PasswordBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234A2EA829EA8F92005CC6BF /* PasswordBar.swift */; };
 		234F198F297CD4AB0060FC73 /* Homeview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234F198E297CD4AB0060FC73 /* Homeview.swift */; };
 		23553C27297E394A00E50FC0 /* Settingview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23553C26297E394A00E50FC0 /* Settingview.swift */; };
 		23553C29297E3BC200E50FC0 /* Reportview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23553C28297E3BC200E50FC0 /* Reportview.swift */; };
+		235A41E12A24567500059FA2 /* Createcommunityview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235A41E02A24567500059FA2 /* Createcommunityview.swift */; };
+		235A41E52A25B6CE00059FA2 /* Prefecture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235A41E42A25B6CE00059FA2 /* Prefecture.swift */; };
+		235CB7922A2A196C0081B674 /* Communityhomeview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235CB7912A2A196C0081B674 /* Communityhomeview.swift */; };
 		235E1E3029FCD31600ADADDF /* TextFieldwithClearButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235E1E2F29FCD31600ADADDF /* TextFieldwithClearButton.swift */; };
 		23605DDC29FE266600616B0F /* Imagepicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23605DDB29FE266600616B0F /* Imagepicker.swift */; };
 		23605DDE29FE278500616B0F /* icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23605DDD29FE278500616B0F /* icon.swift */; };
@@ -66,11 +69,14 @@
 		2301C6E2297FF5E900B7DC98 /* Mapview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mapview.swift; sourceTree = "<group>"; };
 		233E8A4429ADC3FB00918DEB /* MapModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapModels.swift; sourceTree = "<group>"; };
 		2347DB1329A881F500EECDB3 /* MemberList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberList.swift; sourceTree = "<group>"; };
-		2347DB1529A8821200EECDB3 /* ClubList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubList.swift; sourceTree = "<group>"; };
+		2347DB1529A8821200EECDB3 /* CommunityList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityList.swift; sourceTree = "<group>"; };
 		234A2EA829EA8F92005CC6BF /* PasswordBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordBar.swift; sourceTree = "<group>"; };
 		234F198E297CD4AB0060FC73 /* Homeview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Homeview.swift; sourceTree = "<group>"; };
 		23553C26297E394A00E50FC0 /* Settingview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settingview.swift; sourceTree = "<group>"; };
 		23553C28297E3BC200E50FC0 /* Reportview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reportview.swift; sourceTree = "<group>"; };
+		235A41E02A24567500059FA2 /* Createcommunityview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Createcommunityview.swift; sourceTree = "<group>"; };
+		235A41E42A25B6CE00059FA2 /* Prefecture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prefecture.swift; sourceTree = "<group>"; };
+		235CB7912A2A196C0081B674 /* Communityhomeview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Communityhomeview.swift; sourceTree = "<group>"; };
 		235E1E2F29FCD31600ADADDF /* TextFieldwithClearButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldwithClearButton.swift; sourceTree = "<group>"; };
 		23605DDB29FE266600616B0F /* Imagepicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Imagepicker.swift; sourceTree = "<group>"; };
 		23605DDD29FE278500616B0F /* icon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = icon.swift; sourceTree = "<group>"; };
@@ -173,16 +179,19 @@
 				233E8A4429ADC3FB00918DEB /* MapModels.swift */,
 				23553C28297E3BC200E50FC0 /* Reportview.swift */,
 				23553C26297E394A00E50FC0 /* Settingview.swift */,
+				235A41E02A24567500059FA2 /* Createcommunityview.swift */,
 				23E9B09D2A0F19DA005F361D /* UserProfile.swift */,
 				23605DDD29FE278500616B0F /* icon.swift */,
 				23605DDB29FE266600616B0F /* Imagepicker.swift */,
 				2347DB1329A881F500EECDB3 /* MemberList.swift */,
-				2347DB1529A8821200EECDB3 /* ClubList.swift */,
+				2347DB1529A8821200EECDB3 /* CommunityList.swift */,
+				235CB7912A2A196C0081B674 /* Communityhomeview.swift */,
 				23E159AB29A4E44E005E965C /* SearchBar.swift */,
 				235E1E2F29FCD31600ADADDF /* TextFieldwithClearButton.swift */,
 				234A2EA829EA8F92005CC6BF /* PasswordBar.swift */,
 				23BD257F29EE7F6600F3C04E /* Design.swift */,
 				2360E5CF29EF90EE004D82F9 /* Error.swift */,
+				235A41E42A25B6CE00059FA2 /* Prefecture.swift */,
 				237F131229E7FB2D004AD7A2 /* GoogleService-Info.plist */,
 			);
 			path = proto;
@@ -487,8 +496,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				2347DB1429A881F500EECDB3 /* MemberList.swift in Sources */,
-				2347DB1629A8821200EECDB3 /* ClubList.swift in Sources */,
+				235A41E12A24567500059FA2 /* Createcommunityview.swift in Sources */,
+				2347DB1629A8821200EECDB3 /* CommunityList.swift in Sources */,
 				235E1E3029FCD31600ADADDF /* TextFieldwithClearButton.swift in Sources */,
+				235CB7922A2A196C0081B674 /* Communityhomeview.swift in Sources */,
 				23553C27297E394A00E50FC0 /* Settingview.swift in Sources */,
 				234A2EA929EA8F92005CC6BF /* PasswordBar.swift in Sources */,
 				23553C29297E3BC200E50FC0 /* Reportview.swift in Sources */,
@@ -499,6 +510,7 @@
 				237F132229E7FF8C004AD7A2 /* Signupview.swift in Sources */,
 				2384D25C297C44FC00386949 /* ContentView.swift in Sources */,
 				23E9B09E2A0F19DA005F361D /* UserProfile.swift in Sources */,
+				235A41E52A25B6CE00059FA2 /* Prefecture.swift in Sources */,
 				233E8A4529ADC3FB00918DEB /* MapModels.swift in Sources */,
 				23605DDE29FE278500616B0F /* icon.swift in Sources */,
 				2384D266297C44FE00386949 /* proto.xcdatamodeld in Sources */,

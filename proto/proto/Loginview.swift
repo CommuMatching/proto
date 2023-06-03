@@ -22,40 +22,49 @@ struct Loginview: View {
     @State private var err = false
     
     var body: some View {
-        NavigationStack{
-            VStack(spacing: 40){
-                VStack(spacing: 30){
-                    // メールアドレス
-                    TextFieldwithClearButton(placeholder: "メールアドレス", text: $mail)
-                        .focused($focusedField, equals: .Mail)
-                        .toolbar{
-                            ToolbarItem(placement: .keyboard){
-                                HStack{
+        NavigationStack {
+            VStack(spacing: 40) {
+                VStack(spacing: 30) {
+                    VStack(alignment: .leading, spacing: 0.0) {
+                        Text("メールアドレス")
+                            .foregroundColor(.TextColor)
+                            .padding(.leading, 8)
+                        TextFieldwithClearButton(placeholder: "example@~", text: $mail)
+                            .focused($focusedField, equals: .Mail)
+                            .toolbar {
+                                ToolbarItem(placement: .keyboard) {
+                                    HStack {
+                                        Spacer()
+                                        Button("Close") {
+                                            self.focusedField = nil
+                                        }
+                                    }
+                                }
+                            }
+                            .textfieldframe(linewid: (focusedField == .Mail) ? 4.0 : 2.0)
+                            .keyboardType(.emailAddress)
+                    }
+                    
+                    VStack(alignment: .leading, spacing: 0.0) {
+                        Text("パスワード")
+                            .foregroundColor(.TextColor)
+                            .padding(.leading, 8)
+                        PasswordBar(password:$password)
+                            .focused($focusedField, equals: .Password)
+                            .toolbar {
+                                ToolbarItemGroup(placement: .keyboard) {
                                     Spacer()
-                                    Button("Close"){
+                                    Button("Close") {
                                         self.focusedField = nil
                                     }
                                 }
                             }
-                        }
-                        .textfieldframe(linewid: (focusedField == .Mail) ? 4.0 : 2.0)
-                        
-                    // パスワード
-                    PasswordBar(password:$password)
-                        .focused($focusedField, equals: .Password)
-                        .toolbar{
-                            ToolbarItemGroup(placement: .keyboard){
-                                Spacer()
-                                Button("Close"){
-                                    self.focusedField = nil
-                                }
-                            }
-                        }
-                        .textfieldframe(linewid: (focusedField == .Password) ? 4.0 : 2.0)
+                            .textfieldframe(linewid: (focusedField == .Password) ? 4.0 : 2.0)
+                    }
                     
                     // 認証
                     Button(
-                        action:{
+                        action: {
                             self.focusedField = nil
                             // 認証する処理
                             Auth.auth().signIn(withEmail: self.mail, password: self.password) { authResult, error in
@@ -78,7 +87,7 @@ struct Loginview: View {
                     ContentView()
                 })
                 
-                HStack(alignment: .bottom){
+                HStack(alignment: .bottom) {
                     Text("アカウントをお持ちでない方は")
                         .font(.caption)
                         .opacity(0.5)

@@ -15,11 +15,13 @@ struct PasswordBar: View {
         HStack {
             ZStack(alignment: .trailing) {
                     
-                TextField("パスワード", text: $password)
+                TextField("", text: $password)
                     .opacity(show ? 1 : 0)
+                    .textInputAutocapitalization(.never)
                     
-                SecureField("パスワード", text: $password)
+                SecureField("", text: $password)
                     .opacity(show ? 0 : 1)
+                    .textInputAutocapitalization(.never)
                     
                 Button(action: {
                     show.toggle()

@@ -15,6 +15,7 @@ struct TextFieldwithClearButton: View {
         HStack {
             ZStack(alignment: .trailing) {
                 TextField(placeholder, text: $text)
+                    .textInputAutocapitalization(.never)
                 //clearbutton
                 Button(
                     action: {
