@@ -7,7 +7,6 @@
 
 import SwiftUI
 import FirebaseCore
-import FirebaseAuth
 
 
 class AppDelegate: NSObject, UIApplicationDelegate {
@@ -26,11 +25,7 @@ struct protoApp: App {
 
     var body: some Scene {
         WindowGroup {
-            if Auth.auth().currentUser == nil {
-                Loginview()
-            }else{
-                ContentView()
-            }
+            LaunchScreen()
         }
     }
 }

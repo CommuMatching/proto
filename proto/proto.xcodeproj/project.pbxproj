@@ -17,8 +17,11 @@
 		23553C29297E3BC200E50FC0 /* Reportview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23553C28297E3BC200E50FC0 /* Reportview.swift */; };
 		235A41E12A24567500059FA2 /* Createcommunityview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235A41E02A24567500059FA2 /* Createcommunityview.swift */; };
 		235A41E52A25B6CE00059FA2 /* Prefecture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235A41E42A25B6CE00059FA2 /* Prefecture.swift */; };
-		235CB7922A2A196C0081B674 /* Communityhomeview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235CB7912A2A196C0081B674 /* Communityhomeview.swift */; };
+		235A524E2A3DA6A300C442BA /* LaunchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235A524D2A3DA6A300C442BA /* LaunchScreen.swift */; };
+		235A52502A3DAA0400C442BA /* DataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235A524F2A3DAA0400C442BA /* DataClass.swift */; };
+		235A52522A3DCEC300C442BA /* Userprofview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235A52512A3DCEC300C442BA /* Userprofview.swift */; };
 		235E1E3029FCD31600ADADDF /* TextFieldwithClearButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235E1E2F29FCD31600ADADDF /* TextFieldwithClearButton.swift */; };
+		235EB1282A45AF410006A5E2 /* Communityprofview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235EB1272A45AF410006A5E2 /* Communityprofview.swift */; };
 		23605DDC29FE266600616B0F /* Imagepicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23605DDB29FE266600616B0F /* Imagepicker.swift */; };
 		23605DDE29FE278500616B0F /* icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23605DDD29FE278500616B0F /* icon.swift */; };
 		2360E5D029EF90EE004D82F9 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2360E5CF29EF90EE004D82F9 /* Error.swift */; };
@@ -76,8 +79,11 @@
 		23553C28297E3BC200E50FC0 /* Reportview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reportview.swift; sourceTree = "<group>"; };
 		235A41E02A24567500059FA2 /* Createcommunityview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Createcommunityview.swift; sourceTree = "<group>"; };
 		235A41E42A25B6CE00059FA2 /* Prefecture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prefecture.swift; sourceTree = "<group>"; };
-		235CB7912A2A196C0081B674 /* Communityhomeview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Communityhomeview.swift; sourceTree = "<group>"; };
+		235A524D2A3DA6A300C442BA /* LaunchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreen.swift; sourceTree = "<group>"; };
+		235A524F2A3DAA0400C442BA /* DataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataClass.swift; sourceTree = "<group>"; };
+		235A52512A3DCEC300C442BA /* Userprofview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Userprofview.swift; sourceTree = "<group>"; };
 		235E1E2F29FCD31600ADADDF /* TextFieldwithClearButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldwithClearButton.swift; sourceTree = "<group>"; };
+		235EB1272A45AF410006A5E2 /* Communityprofview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Communityprofview.swift; sourceTree = "<group>"; };
 		23605DDB29FE266600616B0F /* Imagepicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Imagepicker.swift; sourceTree = "<group>"; };
 		23605DDD29FE278500616B0F /* icon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = icon.swift; sourceTree = "<group>"; };
 		2360E5CF29EF90EE004D82F9 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
@@ -168,13 +174,19 @@
 			isa = PBXGroup;
 			children = (
 				2384D259297C44FC00386949 /* protoApp.swift */,
-				2384D25B297C44FC00386949 /* ContentView.swift */,
+				235A524D2A3DA6A300C442BA /* LaunchScreen.swift */,
+				235A524F2A3DAA0400C442BA /* DataClass.swift */,
 				2384D25D297C44FE00386949 /* Assets.xcassets */,
 				2384D264297C44FE00386949 /* proto.xcdatamodeld */,
 				2384D25F297C44FE00386949 /* Preview Content */,
+				2384D25B297C44FC00386949 /* ContentView.swift */,
 				23BD257D29EE771700F3C04E /* Loginview.swift */,
 				237F132129E7FF8C004AD7A2 /* Signupview.swift */,
+				2347DB1529A8821200EECDB3 /* CommunityList.swift */,
+				235EB1272A45AF410006A5E2 /* Communityprofview.swift */,
 				234F198E297CD4AB0060FC73 /* Homeview.swift */,
+				2347DB1329A881F500EECDB3 /* MemberList.swift */,
+				235A52512A3DCEC300C442BA /* Userprofview.swift */,
 				2301C6E2297FF5E900B7DC98 /* Mapview.swift */,
 				233E8A4429ADC3FB00918DEB /* MapModels.swift */,
 				23553C28297E3BC200E50FC0 /* Reportview.swift */,
@@ -183,9 +195,6 @@
 				23E9B09D2A0F19DA005F361D /* UserProfile.swift */,
 				23605DDD29FE278500616B0F /* icon.swift */,
 				23605DDB29FE266600616B0F /* Imagepicker.swift */,
-				2347DB1329A881F500EECDB3 /* MemberList.swift */,
-				2347DB1529A8821200EECDB3 /* CommunityList.swift */,
-				235CB7912A2A196C0081B674 /* Communityhomeview.swift */,
 				23E159AB29A4E44E005E965C /* SearchBar.swift */,
 				235E1E2F29FCD31600ADADDF /* TextFieldwithClearButton.swift */,
 				234A2EA829EA8F92005CC6BF /* PasswordBar.swift */,
@@ -499,20 +508,23 @@
 				235A41E12A24567500059FA2 /* Createcommunityview.swift in Sources */,
 				2347DB1629A8821200EECDB3 /* CommunityList.swift in Sources */,
 				235E1E3029FCD31600ADADDF /* TextFieldwithClearButton.swift in Sources */,
-				235CB7922A2A196C0081B674 /* Communityhomeview.swift in Sources */,
 				23553C27297E394A00E50FC0 /* Settingview.swift in Sources */,
 				234A2EA929EA8F92005CC6BF /* PasswordBar.swift in Sources */,
 				23553C29297E3BC200E50FC0 /* Reportview.swift in Sources */,
+				235EB1282A45AF410006A5E2 /* Communityprofview.swift in Sources */,
 				234F198F297CD4AB0060FC73 /* Homeview.swift in Sources */,
+				235A52522A3DCEC300C442BA /* Userprofview.swift in Sources */,
 				2301C6E3297FF5E900B7DC98 /* Mapview.swift in Sources */,
 				2360E5D029EF90EE004D82F9 /* Error.swift in Sources */,
 				23BD258029EE7F6600F3C04E /* Design.swift in Sources */,
 				237F132229E7FF8C004AD7A2 /* Signupview.swift in Sources */,
+				235A524E2A3DA6A300C442BA /* LaunchScreen.swift in Sources */,
 				2384D25C297C44FC00386949 /* ContentView.swift in Sources */,
 				23E9B09E2A0F19DA005F361D /* UserProfile.swift in Sources */,
 				235A41E52A25B6CE00059FA2 /* Prefecture.swift in Sources */,
 				233E8A4529ADC3FB00918DEB /* MapModels.swift in Sources */,
 				23605DDE29FE278500616B0F /* icon.swift in Sources */,
+				235A52502A3DAA0400C442BA /* DataClass.swift in Sources */,
 				2384D266297C44FE00386949 /* proto.xcdatamodeld in Sources */,
 				23E159AC29A4E44E005E965C /* SearchBar.swift in Sources */,
 				23BD257E29EE771700F3C04E /* Loginview.swift in Sources */,

@@ -13,10 +13,11 @@ struct Createcommunityview: View {
     enum Field {
         case CommunityName
         case Region
+        case Contents
     }
-    @State  var comname: String = ""
-    @State  var region: String = "北海道"
-    @State  var contents: String = ""
+    @State var comname: String = ""
+    @State var region: String = "北海道"
+    @State var contents: String = ""
     @State public var errorMessage = ""
     @FocusState private var focusedField: Field?
     @State private var err = false
@@ -63,7 +64,7 @@ struct Createcommunityview: View {
                         .padding(.leading, 8)
                     TextEditor(text: $contents)
                         .frame(height: 170)
-                        .focused($focusedField, equals: .CommunityName)
+                        .focused($focusedField, equals: .Contents)
                         .toolbar {
                             ToolbarItem(placement: .keyboard) {
                                 HStack {
@@ -74,7 +75,7 @@ struct Createcommunityview: View {
                                 }
                             }
                         }
-                        .textfieldframe(linewid: (focusedField == .CommunityName) ? 4.0 : 2.0)
+                        .textfieldframe(linewid: (focusedField == .Contents) ? 4.0 : 2.0)
                         .onChange(of: contents, perform: {notecount in totalChars = contents.count})
                         .onChange(of: contents, perform: { value in
                             if value.count > MaxChar {
@@ -91,12 +92,15 @@ struct Createcommunityview: View {
                             createcom.toggle()
                         }
                         guard let key = ref.child("communities").childByAutoId().key else { return }
+                        let sanitizedComname = comname.rplcingInvldFirebaseKeyChars()
+                        let sanitizedContents = contents.rplcingInvldFirebaseKeyChars()
                         self.ref.updateChildValues([
                             "communities/\(key)": [
-                                "name": self.comname,
+                                "name": sanitizedComname,
                                 "region": self.region,
-                                "contents": self.contents,
-                                "members/\(user.uid)": true] as [String : Any],
+                                "contents": sanitizedContents
+                            ],
+                            "community-members/\(key)/\(user.uid)": true,
                             "users/\(user.uid)/communities/\(key)": true
                         ])
                     } else {
@@ -119,5 +123,17 @@ struct Createcommunityview: View {
 struct Createcommunityview_Previews: PreviewProvider {
     static var previews: some View {
         Createcommunityview()
+    }
+}
+
+extension String {
+    func rplcingInvldFirebaseKeyChars() -> String {
+        return self
+            .replacingOccurrences(of: "/", with: "-")
+            .replacingOccurrences(of: ".", with: "-")
+            .replacingOccurrences(of: "#", with: "-")
+            .replacingOccurrences(of: "$", with: "-")
+            .replacingOccurrences(of: "[", with: "-")
+            .replacingOccurrences(of: "]", with: "-")
     }
 }
